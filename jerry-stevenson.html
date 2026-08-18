@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jerry Stevenson &amp; SB 316 — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --paper-dim:#E9E0D0;
+    --void:#181210;
+    --void-2:#241A17;
+    --maroon:#6E1F2B;
+    --maroon-dim:#8C3B44;
+    --ink:#211714;
+    --ink-soft:#4A3B35;
+    --line:#C9BBA4;
+    --gold:#B4863C;
+    --max:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--maroon);color:var(--paper);}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-dim);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== top bar ===== */
+  .topbar{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:12px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  /* ===== masthead ===== */
+  header.masthead{
+    padding:64px 24px 40px;
+    border-bottom:3px solid var(--void);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  h1.title{
+    font-size:clamp(32px,5.4vw,54px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    max-width:760px;
+  }
+  h1.title em{font-style:italic;color:var(--maroon);}
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-top:20px;
+    line-height:1.5;
+  }
+  .byline{
+    margin-top:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  /* ===== glossary strip ===== */
+  .glossary{
+    background:var(--paper-dim);
+    border-bottom:1px solid var(--line);
+    padding:0;
+  }
+  .glossary .wrap{padding:0;}
+  table.glossary-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  table.glossary-table td{
+    padding:16px 24px;
+    vertical-align:top;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    width:20%;
+  }
+  table.glossary-table tr:last-child td{border-bottom:none;}
+  table.glossary-table td:last-child{border-right:none;}
+  .g-term{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:6px;
+  }
+  .g-def{color:var(--ink-soft);font-size:14px;line-height:1.4;}
+
+  @media(max-width:820px){
+    table.glossary-table, table.glossary-table tbody, table.glossary-table tr, table.glossary-table td{
+      display:block; width:100%;
+    }
+    table.glossary-table td{border-right:none;}
+  }
+
+  /* ===== toc / jump nav ===== */
+  nav.jump{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,236,224,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  nav.jump .wrap{padding:10px 24px;display:flex;gap:22px;}
+  nav.jump button{
+    background:none;border:none;cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+  }
+  nav.jump button:hover{color:var(--maroon);border-bottom-color:var(--maroon);}
+
+  /* ===== movement divider ===== */
+  .movement{
+    display:flex; align-items:center; gap:18px;
+    margin:0; padding:56px 24px 0;
+    max-width:var(--max); margin-left:auto; margin-right:auto;
+  }
+  .movement .num{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:15px;
+    color:var(--maroon);
+    white-space:nowrap;
+  }
+  .movement .rule{flex:1;height:1px;background:var(--line);}
+  .movement .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  section.section{padding:22px 24px 8px;}
+  section.section h2{
+    font-size:clamp(24px,3.6vw,32px);
+    line-height:1.15;
+    margin-bottom:18px;
+    max-width:640px;
+  }
+  section.section p{margin:0 0 18px;color:var(--ink);}
+  section.section p.lead{font-size:18px;color:var(--ink-soft);}
+
+  /* ===== void panel (stats/quotes) ===== */
+  .void-panel{
+    background:var(--void);
+    color:var(--paper);
+    border-radius:2px;
+    padding:32px 28px;
+    margin:28px 0;
+  }
+  .void-panel .void-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .void-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:24px;
+  }
+  .void-stat .num{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(26px,4vw,38px);
+    line-height:1.05;
+    color:#fff;
+  }
+  .void-stat .cap{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#C9BBAE;
+    margin-top:6px;
+    line-height:1.35;
+  }
+  .void-quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(19px,2.6vw,24px);
+    line-height:1.45;
+    color:#fff;
+    max-width:680px;
+  }
+  .void-quote .cite{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-style:normal;
+    font-size:12.5px;
+    color:var(--gold);
+    margin-top:14px;
+    letter-spacing:.02em;
+  }
+
+  /* ===== doc card (primary source) ===== */
+  .doc-card{
+    border:1px solid var(--line);
+    background:#fff;
+    border-left:4px solid var(--maroon);
+    padding:22px 24px;
+    margin:22px 0;
+    border-radius:1px;
+  }
+  .doc-card .doc-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:10px;
+  }
+  .doc-card blockquote{
+    margin:0;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:17.5px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .doc-card .doc-source{
+    margin-top:12px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  /* ===== vote table ===== */
+  .vote-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14.5px;}
+  .vote-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:8px 10px;
+    border-bottom:2px solid var(--void);
+  }
+  .vote-table td{
+    padding:10px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .vote-table td.tally{font-family:'IBM Plex Mono',monospace;font-weight:600;white-space:nowrap;}
+  .vote-table tr.contested td.tally{color:var(--maroon);}
+
+  /* ===== timeline list ===== */
+  .tl{list-style:none;margin:22px 0;padding:0;border-left:2px solid var(--line);}
+  .tl li{position:relative;padding:0 0 22px 24px;}
+  .tl li::before{
+    content:"";position:absolute;left:-6px;top:5px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--maroon);
+  }
+  .tl .date{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--maroon);font-weight:600;display:block;margin-bottom:3px;}
+  .tl .desc{color:var(--ink-soft);font-size:15px;}
+
+  /* ===== inline definition ===== */
+  .def-inline{
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:16px 20px;
+    margin:20px 0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .def-inline strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.03em;}
+
+  /* ===== sources footer per section ===== */
+  .sources{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:8px 0 40px;
+    line-height:1.6;
+  }
+  .sources strong{color:var(--maroon);text-transform:uppercase;letter-spacing:.05em;font-size:11px;}
+
+  /* ===== closing / connective ===== */
+  .connective{
+    max-width:var(--max);margin:0 auto;padding:44px 24px 8px;
+  }
+  .connective p{
+    font-size:18px;color:var(--ink-soft);line-height:1.55;
+    border-left:3px solid var(--gold);
+    padding-left:20px;
+  }
+
+  footer.site-footer{
+    margin-top:60px;
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:40px 24px 50px;
+  }
+  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{color:#fff;font-size:20px;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:520px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+
+  @media(max-width:600px){
+    .void-panel{padding:24px 18px;}
+    section.section{padding:18px 18px 8px;}
+    header.masthead{padding:48px 18px 32px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>The Weber County Hive · Utah Senators</span>
+  <a href="index.html">← All senators</a>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Investigation · MIDA / SB 316</div>
+  <h1 class="title">The Senator Who Wrote <em>His Own Board's</em> Rulebook</h1>
+  <p class="dek">Sen. Jerry Stevenson is Vice Chair of the Military Installation Development Authority. In 2025 he personally sponsored the bill that expanded MIDA's own powers — including letting MIDA review the environmental impact of its own projects. Thirteen months later, his board used that power to approve Stratos. The same year, on a second state development authority, he personally moved financing for a different developer's project — and had to vote on it twice after his own committee initially said no.</p>
+  <div class="byline">THE WEBER COUNTY HIVE · webercountyhive.substack.com</div>
+</header>
+
+<div class="glossary">
+  <div class="wrap">
+    <table class="glossary-table">
+      <tr>
+        <td><span class="g-term">MIDA</span><span class="g-def">Military Installation Development Authority — a state agency created in 2007 to help Hill Air Force Base, now operating statewide project areas with tax-diversion power.</span></td>
+        <td><span class="g-term">SB 316</span><span class="g-def">2025 bill, chief-sponsored by Sen. Stevenson, expanding MIDA's own taxing and environmental-review authority.</span></td>
+        <td><span class="g-term">Lead agency</span><span class="g-def">The entity legally responsible for a project's environmental review. SB 316 let MIDA name itself lead agency for its own projects.</span></td>
+        <td><span class="g-term">Vice Chair</span><span class="g-def">Stevenson's seat on MIDA's board — the body that later used SB 316's new power to approve Stratos, with Stevenson voting yes.</span></td>
+        <td><span class="g-term">Stratos</span><span class="g-def">The Box Elder County data-center/gas-power project MIDA's board approved April 24, 2026, roughly 13 months after SB 316 was signed.</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<nav class="jump">
+  <div class="wrap">
+    <button data-scroll-to="m1">I · The Vice Chair</button>
+    <button data-scroll-to="m2">II · The Bill</button>
+    <button data-scroll-to="m3">III · The Vote</button>
+    <button data-scroll-to="m4">IV · Thirteen Months</button>
+    <button data-scroll-to="m5">V · The Money</button>
+    <button data-scroll-to="m6">VI · The Other Board</button>
+  </div>
+</nav>
+
+<!-- ============ MOVEMENT I ============ -->
+<div class="movement" id="m1">
+  <span class="num">I.</span><span class="rule"></span><span class="label">The Vice Chair</span>
+</div>
+<section class="section">
+  <h2>A senator sits on the board he's about to legislate for</h2>
+  <p class="lead">Sen. Jerry W. Stevenson (SD-6) is MIDA's sitting Vice Chair — confirmed on the record in the board's own June 24, 2025 minutes, alongside Chair Stuart Adams, Mark Shepherd, Gary Harter, Mike Ostermiller, and Gage Froerer.</p>
+  <p>Stevenson isn't a passive appointee. Until his retirement from the Senate, he chaired Executive Appropriations — the Senate's top budget committee, a seat now passing to Tami Tran (see Movement V). He also sits on the Point of the Mountain State Land Authority board, a separate state development authority, where a prior investigation found him voting on his own "cleanup bill" for that same authority — a pattern of sponsoring legislation that touches boards he personally sits on.</p>
+  <div class="def-inline"><strong>Worth noting</strong> — none of this is illegal. Utah law allows officials to serve on multiple boards and sponsor legislation affecting them. What follows is the documented record of what that overlap produced.</div>
+
+  <div class="doc-card">
+    <div class="doc-tag">Not a new pattern — same seat, different agency</div>
+    <blockquote>Stevenson is also a sitting UIPA board member, and he personally motioned the PCC LAND LLC development agreement at UIPA's May 20, 2024 meeting — the agreement at the center of this newsroom's Little Mountain Service Area investigation.</blockquote>
+    <div class="doc-source">UIPA Board Meeting Minutes, May 20, 2024. Full story: <a href="https://webercountyhive-coder.github.io/UIPA/little-mountain-service-area.html">The Little Mountain Service Area investigation →</a></div>
+  </div>
+
+  <p>UIPA and MIDA run on the same basic mechanism — tax differential, board-adopted project areas, minimal outside review. Stevenson sits on both boards. What follows is what happens when he also writes the law for one of them.</p>
+
+  <div class="sources"><strong>Sources</strong><br>MIDA Board Meeting Minutes, June 24, 2025. Utah News Dispatch, "End of the Adams era," July 22, 2026. UIPA Board Meeting Minutes, May 20, 2024.</div>
+</section>
+
+<!-- ============ MOVEMENT II ============ -->
+<div class="movement" id="m2">
+  <span class="num">II.</span><span class="rule"></span><span class="label">The Bill</span>
+</div>
+<section class="section">
+  <h2>SB 316: Stevenson's board gets to grade its own homework</h2>
+  <p class="lead">Full title: "Military Installation Development Authority and Other Development Zone Amendments." Chief Sponsor: Sen. Jerry W. Stevenson. House Sponsor: Rep. Val L. Peterson.</p>
+  <p>The bill did three things to MIDA's taxing power, and one thing to its regulatory power:</p>
+
+  <div class="void-panel">
+    <div class="void-label">What SB 316 (2025) actually changed</div>
+    <div class="void-stats">
+      <div class="void-stat"><div class="num">50%</div><div class="cap">New "eligible basic special district" category gets the same 50% sales-tax cut MIDA already claims — effective Jan 1, 2026</div></div>
+      <div class="void-stat"><div class="num">100%</div><div class="cap">MIDA can capture up to 100% of its own resort-communities tax revenue in "qualified development zones" — stacked on top of the base 50% cut</div></div>
+      <div class="void-stat"><div class="num">3rd Sub</div><div class="cap">The House's third substitute added a power not in any earlier version: MIDA may act as "lead agency" for environmental review of its own project areas</div></div>
+    </div>
+  </div>
+
+  <p>That last change is the one that matters most for what happened thirteen months later. Before SB 316, MIDA's projects were subject to environmental review by an outside authority. After it, MIDA can review itself.</p>
+
+  <div class="doc-card">
+    <div class="doc-tag">Who presented the bill</div>
+    <blockquote>MIDA's own staff personally lobbied for the bill at both chambers of the Legislature.</blockquote>
+    <div class="doc-source">Ariana Farber, MIDA Deputy Director — presented in the Senate committee.<br>Nicole Cottle, MIDA Chief Legal &amp; Administrative Officer — presented in the House committee.</div>
+  </div>
+
+  <p>MIDA didn't just benefit from SB 316. Its own leadership showed up and argued for it — while its Vice Chair carried it as the bill's sponsor.</p>
+  <div class="sources"><strong>Sources</strong><br>S.B. 316, 2025 General Session, Utah State Legislature — bill text, sponsor listing, drafting attorney (RuthAnne Oakey-Frost), fiscal analyst (Jared Gibbs). Senate and House Economic Development &amp; Workforce Services Committee minutes and substitute history, 2025.</div>
+</section>
+
+<!-- ============ MOVEMENT III ============ -->
+<div class="movement" id="m3">
+  <span class="num">III.</span><span class="rule"></span><span class="label">The Vote</span>
+</div>
+<section class="section">
+  <h2>Not a quiet bill — a contested one</h2>
+  <p class="lead">SB 316 didn't sail through on a voice vote. At nearly every stage, it drew real opposition — including from within the majority party.</p>
+
+  <table class="vote-table">
+    <tr><th>Stage</th><th>Date</th><th>Result</th></tr>
+    <tr><td>Introduced</td><td class="mono">2/21/2025</td><td class="tally">—</td></tr>
+    <tr><td>Senate Econ Dev &amp; Workforce Cmte (substituted)</td><td class="mono">2/26/2025</td><td class="tally">5-0-1<br><span style="font-weight:400;color:var(--ink-soft);font-size:12.5px;">(Adams absent)</span></td></tr>
+    <tr><td>Senate floor, 2nd reading</td><td class="mono">—</td><td class="tally">23-3-3</td></tr>
+    <tr><td>Senate floor, 3rd reading</td><td class="mono">—</td><td class="tally">19-5-5</td></tr>
+    <tr class="contested"><td>House Econ Dev &amp; Workforce Cmte (1st→3rd Sub)</td><td class="mono">3/4/2025</td><td class="tally">6-1-3<br><span style="font-weight:400;color:var(--ink-soft);font-size:12.5px;">Rep. Doug Owens voting no</span></td></tr>
+    <tr class="contested"><td>House Econ Dev &amp; Workforce Cmte (favorable)</td><td class="mono">3/4/2025</td><td class="tally">4-3-3</td></tr>
+    <tr class="contested"><td>House floor, 2nd/3rd reading</td><td class="mono">3/7/2025</td><td class="tally">38-27-10</td></tr>
+    <tr><td>Senate concurrence</td><td class="mono">—</td><td class="tally">22-5-2</td></tr>
+    <tr><td><strong>Signed by the Governor</strong></td><td class="mono"><strong>3/27/2025</strong></td><td class="tally">—</td></tr>
+  </table>
+
+  <p>The House votes in particular — 6-1-3, then 4-3-3, then 38-27-10 — are not the margins of a routine technical bill. This was contested at every House stage, and it passed anyway.</p>
+  <div class="sources"><strong>Sources</strong><br>S.B. 316 (2025) full legislative history and vote record, Utah State Legislature bill tracking.</div>
+</section>
+
+<!-- ============ MOVEMENT IV ============ -->
+<div class="movement" id="m4">
+  <span class="num">IV.</span><span class="rule"></span><span class="label">Thirteen Months</span>
+</div>
+<section class="section">
+  <h2>The power gets used — on the exact project his board approves</h2>
+  <p class="lead">SB 316 was signed March 27, 2025. On April 24, 2026 — roughly thirteen months later — MIDA's board used the new "lead agency" environmental-review authority to approve the Stratos Project Area Plan. Stevenson voted yes.</p>
+
+  <ul class="tl">
+    <li><span class="date">MARCH 27, 2025</span><span class="desc">SB 316 signed into law. MIDA can now act as its own environmental lead agency.</span></li>
+    <li><span class="date">APRIL 24, 2026 — 13 MONTHS LATER</span><span class="desc">MIDA's board votes on four resolutions tied to Stratos: adopting the Project Area Plan, development standards, the O'Leary development agreement, and the Box Elder County interlocal agreement.</span></li>
+    <li><span class="date">SAME MEETING</span><span class="desc">Stevenson votes yes on all four.</span></li>
+  </ul>
+
+  <div class="void-panel">
+    <div class="void-quote">"The bill Stevenson personally sponsored, with MIDA's own staff lobbying for it, was directly used roughly 13 months later to approve the exact project his own board then voted on."
+      <span class="cite">— documented sequence, MIDA board minutes, April 24, 2026</span>
+    </div>
+  </div>
+
+  <p>This is the through-line of the whole bill: a sitting board member sponsors the law that lets his own agency skip outside environmental review, his agency's staff personally lobby the Legislature for it, and just over a year later that same board — with him voting — uses the power on a live project.</p>
+  <div class="sources"><strong>Sources</strong><br>MIDA Board Meeting Minutes, April 24, 2026 (Stratos Project Area Plan, development standards, O'Leary development agreement, Box Elder County interlocal agreement — four resolutions, Stevenson voting yes on each).</div>
+</section>
+
+<!-- ============ MOVEMENT V ============ -->
+<div class="movement" id="m5">
+  <span class="num">V.</span><span class="rule"></span><span class="label">The Money</span>
+</div>
+<section class="section">
+  <h2>Funding his own successor</h2>
+  <p class="lead">Stevenson personally donated to Tami Tran — the Kaysville mayor and SD-6 nominee inheriting both his Senate seat and, per the established pattern, his Executive Appropriations chairmanship. He didn't donate alone, and he didn't donate once.</p>
+  <p>Fellow MIDA board member Stuart Adams — MIDA's Chair — also donated to Tran's campaign in the same window. Two members of the same board that approved Stratos are funding the succession of the seat that oversees the state's budget, including the appropriations that touch MIDA's own projects.</p>
+
+  <div class="void-panel">
+    <div class="void-label">Stevenson's donations to his own successor</div>
+    <div class="void-stats">
+      <div class="void-stat"><div class="num">$1,000</div><div class="cap">At Convention, Jan 13, 2026</div></div>
+      <div class="void-stat"><div class="num">$500</div><div class="cap">Post-primary/General, June 22, 2026</div></div>
+      <div class="void-stat"><div class="num">$1,500</div><div class="cap">Total across the cycle</div></div>
+    </div>
+  </div>
+
+  <p>The same June 22 date, a "Jed D. Stevenson" of Kaysville gave Tran $4,000 — eight times what the senator himself gave. Whether that's a family connection to Jerry Stevenson isn't confirmed; the two list different city addresses.</p>
+  <div class="sources"><strong>Sources</strong><br>Tami Tran Senate campaign finance filings, Convention and post-primary/General DEX reports.</div>
+</section>
+
+<!-- ============ MOVEMENT VI ============ -->
+<div class="movement" id="m6">
+  <span class="num">VI.</span><span class="rule"></span><span class="label">The Other Board</span>
+</div>
+<section class="section">
+  <h2>Same senator, a second authority, the same playbook</h2>
+  <p class="lead">MIDA isn't the only development authority Stevenson sits on. He's also a voting member of the Utah Inland Port Authority (UIPA) board — the agency behind Weber County's West Weber project area, covered in this newsroom's Little Mountain Service Area investigation. In 2025, the pattern repeated: Stevenson personally moved financing for a private developer, then had to vote on it again after his own committee initially rejected it.</p>
+
+  <div class="tl">
+    <li><span class="date">JUNE 23, 2025</span><span class="desc">UIPA's Authority Infrastructure Bank Loan Committee recommends a $5 million, 3-year loan to PCC Land, LLC — the Gardner Company/Black Pine entity behind West Weber's Promontory Commerce Center — for sewer infrastructure.</span></li>
+    <li><span class="date">JUNE 26, 2025</span><span class="desc">At the full UIPA board meeting, <strong>Board Member Stevenson personally makes the motion</strong> to approve the $5 million loan. It passes unanimously.</span></li>
+    <li><span class="date">SEPTEMBER 15, 2025</span><span class="desc">The loan reaches the Legislature's Executive Appropriations Committee — which Stevenson chairs — for final execution approval. It fails, 9-8-3. Stevenson votes yes; the loan fails anyway.</span></li>
+    <li><span class="date">SAME MEETING</span><span class="desc">Sen. Kirk Cullimore, one of the eight "no" votes, moves to reconsider. On reconsideration, the loan passes.</span></li>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-tag">UIPA Board Minutes, June 26, 2025</div>
+    <blockquote>"Board Member Stevenson moved that the Utah Inland Port Authority Board approves an infrastructure loan from the Inland Port Authority Revolving Loan Fund of $5 million to PCC Land, LLC."</blockquote>
+    <div class="doc-source">Board Chair Osborne seconded. Passed unanimously. Full story: <a href="https://webercountyhive-coder.github.io/UIPA/little-mountain-service-area.html">The Little Mountain Service Area investigation →</a></div>
+  </div>
+
+  <p>The same three principals from the West Weber land assembly — Daniel Stephens, Brad Margetts, and Dallin Curriden — were personally in the room at both the loan committee's approval and the full board vote. This is the identical structure documented at MIDA: a board member with a network of overlapping seats personally advances financing that benefits people who show up, in person, at every stage of the approval.</p>
+
+  <table class="vote-table">
+    <tr><th>Vote</th><th>Result</th></tr>
+    <tr class="contested"><td>EAC, first vote to approve execution</td><td class="tally">FAILED 9-8-3<br><span style="font-weight:400;color:var(--ink-soft);font-size:12.5px;">Stevenson voted yes</span></td></tr>
+    <tr><td>EAC, motion to reconsider (Cullimore)</td><td class="tally">19-0-1</td></tr>
+    <tr><td>EAC, final vote on reconsideration</td><td class="tally">APPROVED</td></tr>
+  </table>
+
+  <p>The no-vote coalition that first blocked the loan wasn't a party-line split — it included both Republicans and Democrats. What changed on reconsideration isn't in the public minutes; only the outcome is.</p>
+  <div class="sources"><strong>Sources</strong><br>UIPA Authority Infrastructure Bank Loan Committee minutes, June 23, 2025. UIPA Board Meeting minutes, June 26, 2025. Utah Legislature Executive Appropriations Committee minutes, Sept 15, 2025 (le.utah.gov).</div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h3>The Weber County Hive · Utah Senators</h3>
+    <p>Legislator profile pages — full board seats, sponsored bills, votes, and campaign finance for individual Utah senators — built exclusively from primary documents. Part of the same newsroom as the UIPA and Little Mountain investigations.</p>
+    <div class="links">
+      <a href="index.html">All senators</a>
+      <a href="https://webercountyhive-coder.github.io/UIPA/">UIPA Investigation Series ↗</a>
+      <a href="https://webercountyhive-coder.github.io/UIPA/little-mountain-service-area.html">Little Mountain Service Area ↗</a>
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-scroll-to]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-scroll-to'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+
+</body>
+</html>
