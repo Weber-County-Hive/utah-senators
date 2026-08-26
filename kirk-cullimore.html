@@ -117,64 +117,122 @@
   .who-role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--maroon);margin-bottom:8px;}
   .who-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
 
+  .flip-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:14px;
+  }
+  .flipcard{perspective:1200px;height:150px;}
+  .flip-toggle{position:absolute;opacity:0;pointer-events:none;}
+  .flip-inner{
+    position:relative;
+    width:100%;height:100%;
+    transition:transform .5s cubic-bezier(.4,.2,.2,1);
+    transform-style:preserve-3d;
+    cursor:pointer;
+    display:block;
+  }
+  .flip-toggle:checked ~ .flip-inner{transform:rotateY(180deg);}
+  .flip-toggle:focus-visible ~ .flip-inner{outline:2px solid var(--maroon);outline-offset:2px;}
+  .flip-front,.flip-back{
+    position:absolute; inset:0;
+    backface-visibility:hidden;
+    border-radius:2px;
+    padding:14px 14px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow-y:auto;
+  }
+  .flip-front{
+    background:#fff;
+    border:1px solid var(--line);
+  }
+  .flip-front .fc-term{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.03em;
+    color:var(--maroon);
+    line-height:1.35;
+  }
+  .flip-front .fc-tap{
+    margin-top:8px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:9.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    opacity:.6;
+  }
+  .flip-back{
+    background:var(--void);
+    color:var(--paper);
+    transform:rotateY(180deg);
+    font-size:12.5px;
+    line-height:1.42;
+    justify-content:flex-start;
+    scrollbar-width:thin;
+    scrollbar-color:var(--gold) transparent;
+  }
+  .flip-back::-webkit-scrollbar{width:5px;}
+  .flip-back::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+
   .glossary{
     background:var(--paper-dim);
     border-bottom:1px solid var(--line);
-    padding:0;
   }
-  .glossary .wrap{padding:0;}
-  table.glossary-table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:14.5px;
-  }
-  table.glossary-table td{
-    padding:16px 24px;
-    vertical-align:top;
-    border-right:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    width:20%;
-  }
-  table.glossary-table tr:last-child td{border-bottom:none;}
-  table.glossary-table td:last-child{border-right:none;}
-  .g-term{
+  .glossary-label{
     font-family:'IBM Plex Mono',monospace;
-    font-weight:600;
-    font-size:12px;
-    letter-spacing:.04em;
+    font-size:11px;
+    letter-spacing:.1em;
     text-transform:uppercase;
-    color:var(--maroon);
-    display:block;
-    margin-bottom:6px;
-  }
-  .g-def{color:var(--ink-soft);font-size:14px;line-height:1.4;}
-
-  @media(max-width:820px){
-    table.glossary-table, table.glossary-table tbody, table.glossary-table tr, table.glossary-table td{
-      display:block; width:100%;
-    }
-    table.glossary-table td{border-right:none;}
+    color:var(--ink-soft);
   }
 
   nav.jump{
     position:sticky; top:0; z-index:50;
-    background:rgba(243,236,224,.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
+    background:var(--void);
+    border-bottom:2px solid var(--gold);
+  }
+  nav.jump .wrap{
+    padding:10px 24px;
+    display:flex;
+    align-items:center;
+    gap:14px;
     overflow-x:auto;
-    white-space:nowrap;
+    scrollbar-width:thin;
+    scrollbar-color:var(--gold) transparent;
   }
-  nav.jump .wrap{padding:10px 24px;display:flex;gap:22px;}
-  nav.jump button{
-    background:none;border:none;cursor:pointer;
+  nav.jump .wrap::-webkit-scrollbar{height:5px;}
+  nav.jump .wrap::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+  nav.jump .jump-label{
+    flex:0 0 auto;
     font-family:'IBM Plex Mono',monospace;
-    font-size:12px;letter-spacing:.05em;text-transform:uppercase;
-    color:var(--ink-soft);
-    padding:4px 0;
-    border-bottom:2px solid transparent;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
     white-space:nowrap;
+    padding-right:6px;
+    border-right:1px solid rgba(180,134,60,.35);
   }
-  nav.jump button:hover{color:var(--maroon);border-bottom-color:var(--maroon);}
+  nav.jump a{
+    flex:0 0 auto;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:20px;
+    cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.02em;
+    color:var(--paper-dim);
+    text-decoration:none;
+    padding:6px 14px;
+    white-space:nowrap;
+    transition:background .15s, color .15s, border-color .15s;
+  }
+  nav.jump a:hover{background:var(--gold);border-color:var(--gold);color:var(--void);}
 
   .movement{
     display:flex; align-items:center; gap:18px;
@@ -407,27 +465,104 @@
 </div>
 
 <div class="glossary">
-  <div class="wrap">
-    <table class="glossary-table">
-      <tr>
-        <td><span class="g-term">Seven-day rule</span><span class="g-def">Utah Code 20A-11, ch.16 — a legislator must file or amend a conflict of interest disclosure within seven calendar days of a triggering change, like a new corporate office.</span></td>
-        <td><span class="g-term">Nucleus Institute</span><span class="g-def">The state innovation institute created by HB 530 (2025), which Cullimore sponsored in the Senate. Its site currently lists him as a board member — and the same bill exempts it from public meetings and records law.</span></td>
-        <td><span class="g-term">Irish Elk LLC</span><span class="g-def">Kyle Palmer's consulting vehicle — documented elsewhere as a recurring recipient of PAC and campaign money across several Utah political networks.</span></td>
-        <td><span class="g-term">SEDI</span><span class="g-def">State-Endorsed Digital Identity Program — Cullimore's 2026 bill amending the state's digital ID system.</span></td>
-        <td><span class="g-term">Confirmation committee</span><span class="g-def">A Senate committee that reviews the governor's appointees before the full Senate votes to confirm them.</span></td>
-      </tr>
-    </table>
+  <div class="wrap" style="padding:24px;">
+    <div class="glossary-label" style="margin-bottom:12px;">Key terms — tap a card to flip it</div>
+    <div class="flip-grid">
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-ml" class="flip-toggle">
+        <label for="fc-ml" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Majority Leader</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">The Senate's second-highest leadership post, under the Senate President — controls floor scheduling and caucus strategy for the majority party.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-bar" class="flip-toggle">
+        <label for="fc-bar" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Utah Bar</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">The state licensing body for attorneys. Cullimore has been a member since 2012 — his admission year is what distinguishes him from his father, admitted decades earlier.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-sentinel" class="flip-toggle">
+        <label for="fc-sentinel" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Sentinel Security Life</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">The Utah-regulated insurance company Cullimore was named President of in April 2026. Movement II covers the 91-day gap before he disclosed it.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-confirm" class="flip-toggle">
+        <label for="fc-confirm" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Confirmation committee</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">A Senate committee that reviews the governor's appointees — including regulators like the insurance commissioner — before the full Senate votes to confirm them.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-seven" class="flip-toggle">
+        <label for="fc-seven" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Seven-day rule</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">Utah Code 20A-11, ch.16 — a legislator must file or amend a conflict of interest disclosure within seven calendar days of a triggering change, like a new corporate office.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-nucleus" class="flip-toggle">
+        <label for="fc-nucleus" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Nucleus Institute</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">The state innovation institute created by HB 530 (2025), which Cullimore sponsored. Its site lists him as a board member — and the bill exempts it from public meetings and records law.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-irishelk" class="flip-toggle">
+        <label for="fc-irishelk" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Irish Elk LLC</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">Kyle Palmer's consulting vehicle — documented elsewhere as a recurring recipient of PAC and campaign money across several Utah political networks.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-sedi" class="flip-toggle">
+        <label for="fc-sedi" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">SEDI</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">State-Endorsed Digital Identity Program — Cullimore's 2026 bill amending the state's digital ID system.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-kcjr" class="flip-toggle">
+        <label for="fc-kcjr" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">KCJR / Titan Legal</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">KCJR is Cullimore's own law practice entity. Titan Legal is his father's eviction firm — a legally separate business, five suites away in the same building. Movement VI has the full picture.</div>
+        </label>
+      </div>
+
+      <div class="flipcard">
+        <input type="checkbox" id="fc-bda" class="flip-toggle">
+        <label for="fc-bda" class="flip-inner">
+          <div class="flip-front"><div class="fc-term">Beehive Development Agency</div><div class="fc-tap">Tap to flip</div></div>
+          <div class="flip-back">A powerful new state authority Cullimore's SB 337 would have created in 2025 — it died without a Senate floor vote. Movement V has more.</div>
+        </label>
+      </div>
+
+    </div>
   </div>
 </div>
 
+
 <nav class="jump">
   <div class="wrap">
-    <button data-scroll-to="m1">I · Majority Leader</button>
-    <button data-scroll-to="m2">II · The Insurance Company</button>
-    <button data-scroll-to="m3">III · The Institute</button>
-    <button data-scroll-to="m4">IV · The Money</button>
-    <button data-scroll-to="m5">V · The Bills</button>
-    <button data-scroll-to="m6">VI · The Entities</button>
+    <span class="jump-label">Jump to →</span>
+    <a href="#m1">1. Majority Leader</a>
+    <a href="#m2">2. The Insurance Co.</a>
+    <a href="#m3">3. The Institute</a>
+    <a href="#m4">4. The Money</a>
+    <a href="#m5">5. The Bills</a>
+    <a href="#m6">6. The Entities</a>
   </div>
 </nav>
 
@@ -640,14 +775,6 @@
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('[data-scroll-to]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var target = document.getElementById(btn.getAttribute('data-scroll-to'));
-      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
-    });
-  });
-</script>
 
 </body>
 </html>
