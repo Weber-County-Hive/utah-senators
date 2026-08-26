@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirk Cullimore &amp; the Confidence of Our Regulatory Partners — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --paper-dim:#E9E0D0;
+    --void:#181210;
+    --void-2:#241A17;
+    --maroon:#6E1F2B;
+    --maroon-dim:#8C3B44;
+    --ink:#211714;
+    --ink-soft:#4A3B35;
+    --line:#C9BBA4;
+    --gold:#B4863C;
+    --max:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--maroon);color:var(--paper);}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-dim);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .topbar{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:12px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  header.masthead{
+    padding:64px 24px 40px;
+    border-bottom:3px solid var(--void);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  h1.title{
+    font-size:clamp(32px,5.4vw,54px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    max-width:760px;
+  }
+  h1.title em{font-style:italic;color:var(--maroon);}
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:660px;
+    margin-top:20px;
+    line-height:1.5;
+  }
+  .byline{
+    margin-top:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  .whoswho{
+    border:2px solid var(--maroon);
+    background:#fff;
+    margin:28px 0 0;
+  }
+  .whoswho-head{
+    background:var(--maroon);
+    color:#fff;
+    padding:12px 20px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .whoswho-inner{padding:20px 24px 22px;}
+  .whoswho-lead{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;}
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;}
+  @media(max-width:600px){.who-grid{grid-template-columns:1fr;}}
+  .who-card{border:1px solid var(--line);padding:14px 16px;background:var(--paper);}
+  .who-card.subject{border-color:var(--maroon);border-width:2px;}
+  .who-name{font-family:'Fraunces',serif;font-weight:600;font-size:15.5px;color:var(--ink);margin-bottom:2px;}
+  .who-role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--maroon);margin-bottom:8px;}
+  .who-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+
+  .glossary{
+    background:var(--paper-dim);
+    border-bottom:1px solid var(--line);
+    padding:0;
+  }
+  .glossary .wrap{padding:0;}
+  table.glossary-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  table.glossary-table td{
+    padding:16px 24px;
+    vertical-align:top;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    width:20%;
+  }
+  table.glossary-table tr:last-child td{border-bottom:none;}
+  table.glossary-table td:last-child{border-right:none;}
+  .g-term{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:6px;
+  }
+  .g-def{color:var(--ink-soft);font-size:14px;line-height:1.4;}
+
+  @media(max-width:820px){
+    table.glossary-table, table.glossary-table tbody, table.glossary-table tr, table.glossary-table td{
+      display:block; width:100%;
+    }
+    table.glossary-table td{border-right:none;}
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,236,224,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  nav.jump .wrap{padding:10px 24px;display:flex;gap:22px;}
+  nav.jump button{
+    background:none;border:none;cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+  }
+  nav.jump button:hover{color:var(--maroon);border-bottom-color:var(--maroon);}
+
+  .movement{
+    display:flex; align-items:center; gap:18px;
+    margin:0; padding:56px 24px 0;
+    max-width:var(--max); margin-left:auto; margin-right:auto;
+  }
+  .movement .num{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:15px;
+    color:var(--maroon);
+    white-space:nowrap;
+  }
+  .movement .rule{flex:1;height:1px;background:var(--line);}
+  .movement .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  section.section{padding:22px 24px 8px;}
+  section.section h2{
+    font-size:clamp(24px,3.6vw,32px);
+    line-height:1.15;
+    margin-bottom:18px;
+    max-width:640px;
+  }
+  section.section p{margin:0 0 18px;color:var(--ink);}
+  section.section p.lead{font-size:18px;color:var(--ink-soft);}
+
+  .void-panel{
+    background:var(--void);
+    color:var(--paper);
+    border-radius:2px;
+    padding:32px 28px;
+    margin:28px 0;
+  }
+  .void-panel .void-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .void-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:24px;
+  }
+  .void-stat .num{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(26px,4vw,38px);
+    line-height:1.05;
+    color:#fff;
+  }
+  .void-stat .cap{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#C9BBAE;
+    margin-top:6px;
+    line-height:1.35;
+  }
+  .void-quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(19px,2.6vw,24px);
+    line-height:1.45;
+    color:#fff;
+    max-width:680px;
+  }
+  .void-quote .cite{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-style:normal;
+    font-size:12.5px;
+    color:var(--gold);
+    margin-top:14px;
+    letter-spacing:.02em;
+  }
+
+  .doc-card{
+    border:1px solid var(--line);
+    background:#fff;
+    border-left:4px solid var(--maroon);
+    padding:22px 24px;
+    margin:22px 0;
+    border-radius:1px;
+  }
+  .doc-card .doc-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:10px;
+  }
+  .doc-card blockquote{
+    margin:0;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:17.5px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .doc-card .doc-source{
+    margin-top:12px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  .vote-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14.5px;}
+  .vote-table th{
+    text-align:left;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:8px 10px;
+    border-bottom:2px solid var(--void);
+  }
+  .vote-table td{
+    padding:10px 10px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .vote-table td.tally{font-family:'IBM Plex Mono',monospace;font-weight:600;white-space:nowrap;}
+  .vote-table tr.contested td.tally{color:var(--maroon);}
+
+  .tl{list-style:none;margin:22px 0;padding:0;border-left:2px solid var(--line);}
+  .tl li{position:relative;padding:0 0 22px 24px;}
+  .tl li::before{
+    content:"";position:absolute;left:-6px;top:5px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--maroon);
+  }
+  .tl .date{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--maroon);font-weight:600;display:block;margin-bottom:3px;}
+  .tl .desc{color:var(--ink-soft);font-size:15px;}
+
+  .def-inline{
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:16px 20px;
+    margin:20px 0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .def-inline strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.03em;}
+
+  .sources{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin-top:8px 0 40px;
+    line-height:1.6;
+  }
+  .sources strong{color:var(--maroon);text-transform:uppercase;letter-spacing:.05em;font-size:11px;}
+
+  .entity-diagram{margin:24px 0;padding:16px;background:#fff;border:1px solid var(--line);}
+
+  footer.site-footer{
+    margin-top:60px;
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:40px 24px 50px;
+  }
+  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{color:#fff;font-size:20px;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:520px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+
+  @media(max-width:600px){
+    .void-panel{padding:24px 18px;}
+    section.section{padding:18px 18px 8px;}
+    header.masthead{padding:48px 18px 32px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">The Weber County Hive</a> · Utah Senators</span>
+  <a href="index.html">← All senators</a>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Investigation · SD-19 / Senate Majority Leader</div>
+  <h1 class="title">The Confidence of <em>Our Regulatory Partners</em></h1>
+  <p class="dek">Sen. Kirk Cullimore is Utah's Senate Majority Leader, president of a state-regulated insurance company, an apparent board member of the state innovation institute he helped create, and a Senate gatekeeper for nearly every AI and data bill to move in 2026. His own campaign has paid one self-dealing political operative nearly $79,000. This is the documented record, built entirely from primary sources.</p>
+  <div class="byline">THE WEBER COUNTY HIVE · <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener" style="color:inherit;">webercountyhive.substack.com</a></div>
+</header>
+
+<div class="whoswho">
+  <div class="whoswho-head">New to this story? Who's who first.</div>
+  <div class="whoswho-inner">
+    <p class="whoswho-lead">Two families come up in this piece, and one confusing detail: a father and son who share the same first, middle, and last name. Here's who's who before you read further.</p>
+    <div class="who-grid">
+      <div class="who-card subject">
+        <div class="who-name">Sen. Kirk A. Cullimore Jr.</div>
+        <div class="who-role">The subject of this profile</div>
+        <div class="who-desc">Utah Senate Majority Leader, District 19. Attorney, Utah Bar since 2012. This piece is about him.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-name">Kirk A. Cullimore Sr.</div>
+        <div class="who-role">His father — not the subject</div>
+        <div class="who-desc">Practicing attorney since 1982. Owns Titan Legal, Utah's largest eviction firm, discussed in Movement VI. Not a senator, holds no public office.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-name">Heather Cullimore</div>
+        <div class="who-role">The senator's wife</div>
+        <div class="who-desc">Co-owner (Member) of KCJR, LLC, the senator's own law practice entity, alongside him.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-name">Sandra Cullimore</div>
+        <div class="who-role">The senator's mother</div>
+        <div class="who-desc">Co-owner (Member) of the father's law firm LLC, alongside Kirk Sr.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="glossary">
+  <div class="wrap">
+    <table class="glossary-table">
+      <tr>
+        <td><span class="g-term">Seven-day rule</span><span class="g-def">Utah Code 20A-11, ch.16 — a legislator must file or amend a conflict of interest disclosure within seven calendar days of a triggering change, like a new corporate office.</span></td>
+        <td><span class="g-term">Nucleus Institute</span><span class="g-def">The state innovation institute created by HB 530 (2025), which Cullimore sponsored in the Senate. Its site currently lists him as a board member — and the same bill exempts it from public meetings and records law.</span></td>
+        <td><span class="g-term">Irish Elk LLC</span><span class="g-def">Kyle Palmer's consulting vehicle — documented elsewhere as a recurring recipient of PAC and campaign money across several Utah political networks.</span></td>
+        <td><span class="g-term">SEDI</span><span class="g-def">State-Endorsed Digital Identity Program — Cullimore's 2026 bill amending the state's digital ID system.</span></td>
+        <td><span class="g-term">Confirmation committee</span><span class="g-def">A Senate committee that reviews the governor's appointees before the full Senate votes to confirm them.</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<nav class="jump">
+  <div class="wrap">
+    <button data-scroll-to="m1">I · Majority Leader</button>
+    <button data-scroll-to="m2">II · The Insurance Company</button>
+    <button data-scroll-to="m3">III · The Institute</button>
+    <button data-scroll-to="m4">IV · The Money</button>
+    <button data-scroll-to="m5">V · The Bills</button>
+    <button data-scroll-to="m6">VI · The Entities</button>
+  </div>
+</nav>
+
+<!-- ============ MOVEMENT I ============ -->
+<div class="movement" id="m1">
+  <span class="num">I.</span><span class="rule"></span><span class="label">Majority Leader</span>
+</div>
+<section class="section">
+  <h2>Six confirmation committees, and a family-first campaign</h2>
+  <p class="lead">Sen. Kirk A. Cullimore Jr. (SD-19) has served since 2019 and became Senate Majority Leader on January 21, 2025. He's an attorney, a former music teacher and small-business owner, and — per his own campaign site — the father of six raising his family in Sandy with his wife, Heather. His public framing is "Family Comes First"; his committee footprint is one of the broadest in the Senate.</p>
+
+  <div class="void-panel">
+    <div class="void-label">His committee seats</div>
+    <div class="void-stats">
+      <div class="void-stat"><div class="num">6</div><div class="cap">Senate confirmation committees — Business and Labor, Judicial, Judiciary, Law Enforcement and Criminal Justice, Retirement and Independent Entities, Revenue and Taxation</div></div>
+      <div class="void-stat"><div class="num">22</div><div class="cap">Total committee seats, including Executive Appropriations and the Economic and Community Development Appropriations Subcommittee</div></div>
+    </div>
+  </div>
+
+  <p>Confirmation committees vet the governor's appointees to state boards and agencies before the full Senate votes. Sitting on six of them, plus the budget subcommittee that funds the Governor's Office of Economic Opportunity, gives him a hand at several stages of state governance at once — writing law, vetting appointees, and controlling the money. None of that is unusual for Senate leadership on its own. What follows is where those seats intersect with his own outside interests.</p>
+  <div class="sources"><strong>Sources</strong><br>le.utah.gov official legislator page and committee rosters, 2026 session. kirkcullimore.com/meet-kirk (campaign website, self-description).</div>
+</section>
+
+<!-- ============ MOVEMENT II ============ -->
+<div class="movement" id="m2">
+  <span class="num">II.</span><span class="rule"></span><span class="label">The Insurance Company</span>
+</div>
+<section class="section">
+  <h2>Effective immediately, disclosed 91 days later</h2>
+  <p class="lead">On April 2, 2026, a Miami-based insurance holding company announced that Utah's Senate Majority Leader was now the president of one of its subsidiaries. State law gave him a week to tell the Senate. He told it three months later.</p>
+
+  <div class="doc-card">
+    <div class="doc-tag">A-CAP / Business Wire, April 2, 2026, 6:13 PM ET</div>
+    <blockquote>"With a strong foundation in Utah and the confidence of our regulatory partners, we are well positioned to grow responsibly, support policyholders, and deliver on our long-term commitments."</blockquote>
+    <div class="doc-source">Kirk Cullimore, quoted in the release naming him President of Sentinel Security Life Insurance Company, "effective immediately." The release notes he'd already been "a member of Sentinel's Board of Directors since 2025," and describes his day job: "he also serves in the Utah State Senate... including his current position as Senate Majority Leader."</div>
+  </div>
+
+  <table class="vote-table">
+    <tr><th>Date</th><th>What the record shows</th></tr>
+    <tr><td class="mono">4/2/2026</td><td>Appointed President, effective immediately</td></tr>
+    <tr><td class="mono">4/9/2026</td><td>Statutory seven-day deadline to amend his disclosure</td></tr>
+    <tr class="contested"><td class="mono">7/2/2026, 11:07 AM</td><td class="tally">Disclosure finally amended — 91 days late</td></tr>
+  </table>
+
+  <p>His relationship to Sentinel wasn't new to his paperwork — it changed category. Two filings dated January 2, 2026 already listed Sentinel, but only as a board seat. The presidency itself first appears on July 2, moved up to the section for current employment and ownership, described there as "President of Life Insurance Company." Sentinel Security Life is Utah-domiciled (NAIC 68802) and regulated by the Utah Insurance Department. Cullimore sits on the Senate Business and Labor Committee, which has jurisdiction over insurance legislation, and on its Confirmation Committee, which reviews the governor's appointees — including the state insurance commissioner — before the full Senate votes to confirm them. He's also a disclosed board member of Haymarket Insurance Company, a reinsurance firm.</p>
+
+  <div class="def-inline"><strong>Worth noting</strong> — this arrangement is structural, not a documented instance of a recorded vote. The current insurance commissioner was confirmed years before Cullimore joined Sentinel's board. What's established is the standing setup: the Senate Majority Leader now leads a company regulated by an agency whose next leader, whenever a vacancy occurs, would be vetted by a committee he sits on.</div>
+  <div class="sources"><strong>Sources</strong><br>A-CAP / Business Wire press release, April 2, 2026. Cullimore's conflict of interest filings, disclosures.utah.gov, 1/2/2026 (×2) and 7/2/2026. Utah Code Title 20A, Chapter 11, Part 16. NAIC company database.</div>
+</section>
+
+<!-- ============ MOVEMENT III ============ -->
+<div class="movement" id="m3">
+  <span class="num">III.</span><span class="rule"></span><span class="label">The Institute</span>
+</div>
+<section class="section">
+  <h2>He sponsored the law. The board it created doesn't have his seat written into it.</h2>
+  <p class="lead">In 2025, Cullimore was the Senate Sponsor of HB 530, which reorganized the Utah Innovation Lab into the Nucleus Institute. The law's seven-member board has no legislator seat — it's the executive director, the director of Talent Ready Utah, and five people "with relevant experience" jointly appointed by the commissioner, the executive director, and the Talent Ready Utah director. If Cullimore sits on that board, it's as one of those five discretionary picks — a separate act from sponsoring the bill that created it.</p>
+
+  <div class="tl">
+    <li><span class="date">2025 SESSION</span><span class="desc">Cullimore is the Senate Sponsor of HB 530, creating the Nucleus Institute.</span></li>
+    <li><span class="date">MAY 7, 2025</span><span class="desc">The Act takes effect.</span></li>
+    <li><span class="date">AUG 27, 2025</span><span class="desc">Public launch coverage — Cullimore participates as the bill's Senate sponsor.</span></li>
+    <li><span class="date">NOV 10, 2025</span><span class="desc">Nucleus's own website sitemap dates the last modification of Cullimore's individual "Board Member" page to this day.</span></li>
+    <li><span class="date">JAN 2, 2026</span><span class="desc">Cullimore's conflict of interest filings do not list Nucleus — consistent with the corporation not yet being formally incorporated at that point.</span></li>
+    <li><span class="date">JAN 30, 2026</span><span class="desc">Nucleus Institute's Articles of Incorporation are filed. Seven director seats are provided for; none are named in the filing.</span></li>
+    <li><span class="date">JULY 2, 2026</span><span class="desc">Cullimore amends his disclosure to add the Sentinel presidency. The Nucleus Institute is not listed.</span></li>
+    <li><span class="date">CURRENT</span><span class="desc">Nucleus's "Our Team" page identifies Cullimore as a board member.</span></li>
+  </div>
+
+  <div class="void-panel">
+    <div class="void-label">Written into the bill Cullimore himself carried in the Senate</div>
+    <div class="void-quote">"The institute and the Utah innovation fund are not subject to: (a) Title 52, Chapter 4, Open and Public Meetings Act; or (b) Title 63G, Chapter 2, Government Records Access and Management Act."
+      <span class="cite">— Enrolled H.B. 530 (2025), Utah Code 53B-37-102(3), Senate Sponsor: Kirk A. Cullimore</span>
+    </div>
+  </div>
+
+  <p>Most state boards, commissions, and quasi-public entities in Utah are subject to both laws — the public can see when a board met, who showed up, how a vote went, and can request records if something doesn't add up. HB 530 writes the Nucleus Institute and its $40 million Utah Innovation Fund out of both requirements, in the same bill that created the board Cullimore appears to sit on. Two concrete consequences follow directly from that exemption:</p>
+
+  <div class="tl">
+    <li><span class="date">NO MEETING RECORD</span><span class="desc">There is no public minutes requirement for whatever meeting or vote added Cullimore to the board — so there's no document that could independently confirm when it happened, who voted, or whether he recused himself from any part of it.</span></li>
+    <li><span class="date">NO RECORDS REQUEST</span><span class="desc">A GRAMA request — the normal tool for compelling a public body to produce records it hasn't voluntarily posted — doesn't apply here. That's not a gap in this investigation's effort; it's the specific legal effect of the statute Cullimore sponsored.</span></li>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-tag">What the record does and doesn't establish</div>
+    <blockquote>The Nucleus Institute currently identifies Sen. Kirk Cullimore as a board member. Its official sitemap dates the last modification of his individual board-member page to November 10, 2025 — almost eight months before his July 2, 2026 filing. The filing does not list the Nucleus Institute. No appointment letter or board record establishing his precise start date has been located, so the website date should not be described as the formal appointment date.</blockquote>
+    <div class="doc-source">This is the practical result of the exemption above: ordinarily, a GRAMA request or a public meeting minute would settle this in an afternoon. Here, neither tool is available.</div>
+  </div>
+
+  <p>This is an apparently unlisted affiliation and a documented open question, not a settled finding of a failed disclosure — the precise date he joined the board isn't publicly available, and without it, no seven-day clock can be timed. What is established: he sits on the Economic and Community Development Appropriations Subcommittee, which funds the Governor's Office of Economic Opportunity — the office run by his apparent fellow Nucleus board member, Jefferson Moss. The institute also manages a state-affiliated venture fund whose individual investment decisions, under this same exemption, are made without the public visibility that would apply to almost any comparable state body.</p>
+  <div class="sources"><strong>Sources</strong><br>Enrolled H.B. 530 (2025), Utah Code 53B-37-102(3) and 53B-37-201. Nucleus Institute Articles of Incorporation, Utah Division of Corporations, Entity 14656796-0140, filed 1/30/2026. nucleusutah.org sitemap and "Our Team" page. Cullimore conflict of interest filings, disclosures.utah.gov.</div>
+</section>
+
+<!-- ============ MOVEMENT IV ============ -->
+<div class="movement" id="m4">
+  <span class="num">IV.</span><span class="rule"></span><span class="label">The Money</span>
+</div>
+<section class="section">
+  <h2>Nearly $79,000 to one operator, and two donors who also funded a dark-money PIC</h2>
+  <p class="lead">Cullimore's own campaign committee has paid Kyle Palmer — through Palmer's consulting vehicle, Irish Elk LLC, and directly — an escalating series of payments across four straight years.</p>
+
+  <table class="vote-table">
+    <tr><th>Date</th><th>Payee</th><th>Amount</th></tr>
+    <tr><td class="mono">3/14/2022</td><td>Irish Elk LLC</td><td class="tally">$5,400</td></tr>
+    <tr><td class="mono">2/9/2023</td><td>Irish Elk LLC (×2)</td><td class="tally">$11,250</td></tr>
+    <tr><td class="mono">5/8/2024</td><td>Irish Elk LLC</td><td class="tally">$7,290</td></tr>
+    <tr><td class="mono">11/29/2024</td><td>Kyle Palmer</td><td class="tally">$15,997.20</td></tr>
+    <tr><td class="mono">5/23/2025</td><td>Kyle Palmer</td><td class="tally">$1,000</td></tr>
+    <tr><td class="mono">10/30/2025</td><td>Irish Elk LLC</td><td class="tally">$11,725</td></tr>
+    <tr class="contested"><td class="mono">11/28/2025</td><td>Kyle Palmer + Irish Elk LLC</td><td class="tally">$26,250.04</td></tr>
+    <tr><td><strong>Total, 2022–2025</strong></td><td></td><td class="tally"><strong>$78,912.24</strong></td></tr>
+  </table>
+
+  <p>Irish Elk LLC is documented elsewhere as a recurring recipient of PAC and campaign money across several Utah political networks. This is the largest single documented payer to Palmer or his vehicle found in that broader tracking to date.</p>
+
+  <div class="void-panel">
+    <div class="void-label">Donors who also gave to Utahns for Balanced Government</div>
+    <div class="void-stats">
+      <div class="void-stat"><div class="num">$26.5K</div><div class="cap">Gershon Gary Barnett (Monsey, NY) gave Cullimore directly across 2022-2025 — the same individual who gave $100,000 to Utahns for Balanced Government, a political issues committee documented separately, on 3/24/2025</div></div>
+      <div class="void-stat"><div class="num">Recurring</div><div class="cap">Utah Bankers Association gives Cullimore $500-$3,500 nearly every reporting period — the same entity that gave $100,000 to Utahns for Balanced Government (later returned in full)</div></div>
+    </div>
+  </div>
+
+  <p>Cullimore's donor base also includes the Utah Apartment Association, recurring at $3,500-$5,000 — the association he served as government affairs chair for, per his own Senate bio.</p>
+  <div class="sources"><strong>Sources</strong><br>DEX campaign finance exports, disclosures.utah.gov, "Cullimore Kirk" filings 2022-2026 (Convention, Primary, General, Year End reports). Utahns for Balanced Government PIC filings, same source.</div>
+</section>
+
+<!-- ============ MOVEMENT V ============ -->
+<div class="movement" id="m5">
+  <span class="num">V.</span><span class="rule"></span><span class="label">The Bills</span>
+</div>
+<section class="section">
+  <h2>Gatekeeper for AI and data, sponsor of tort reform, floor sponsor for healthcare</h2>
+  <p class="lead">Thirteen AI, data, and digital-identity bills moved through the 2026 session with Cullimore as either sponsor or floor sponsor — more than any other senator. Three of his bills sit directly next to donor patterns worth naming plainly.</p>
+
+  <div class="doc-card">
+    <div class="doc-tag">SB 211 — Tort Amendments (his own bill, still pending)</div>
+    <blockquote>Robert J Debry &amp; Associates: $15,000+. Utah Association for Justice / Lawyers Involved for Utah: recurring, including a single $10,000 check. Craig Swapp &amp; Associates, Siegfried &amp; Jensen, Driggs Bills &amp; Day: recurring smaller amounts, nearly every reporting period.</blockquote>
+    <div class="doc-source">He is chief sponsor of tort legislation while that donor base funds him. The bill and the donor pattern are both matters of public record; no motive is asserted here.</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-tag">HB 071 — Health Provider Directory and Access Amendments (floor sponsor, signed)</div>
+    <blockquote>Cullimore is a disclosed board member of Common Spirit Utah's Board of Community Advisors. His donor base separately includes SelectHealth, Regence, MountainStar Healthcare, Molina, UnitedHealth, and Cigna.</blockquote>
+    <div class="doc-source">The same structural pattern as the Sentinel finding: a healthcare-sector board seat, healthcare-sector legislation, and healthcare-sector donations, together.</div>
+  </div>
+
+  <p>Cullimore also floor-sponsored HB 447, Tobacco Amendments — his donor record separately includes Altria Client Services LLC and RAI Services Company. On the AI and data cluster: he sponsored SB 275 (State-Endorsed Digital Identity Program Amendments, signed) and floor-sponsored HB 320 (Office of AI Policy Amendments, which amends the office his own 2024 bill created), HB 450 (Data Privacy Amendments), and HB 220 (Public Safety Data Amendments) — thirteen bills total in that cluster in one session.</p>
+
+  <p>One of his own bills didn't pass: <strong>SB 337 (2025)</strong> would have created the <strong>Beehive Development Agency</strong> — a powerful new state authority the Salt Lake Tribune called "the one authority to rule them all," designed to coordinate with MIDA, the Inland Port Authority, and several other land-use bodies. It died without a Senate floor vote after cross-partisan opposition. A fuller look at that bill, and how it connects to Utah's broader pattern of land-use authorities, follows separately.</p>
+  <div class="sources"><strong>Sources</strong><br>le.utah.gov, Browse Bills by Legislator, 2026 General Session. Cullimore conflict of interest filings. DEX campaign finance exports, disclosures.utah.gov.</div>
+</section>
+
+<!-- ============ MOVEMENT VI ============ -->
+<div class="movement" id="m6">
+  <span class="num">VI.</span><span class="rule"></span><span class="label">The Entities</span>
+</div>
+<section class="section">
+  <h2>A law practice, a second LLC, and his wife's name on both</h2>
+  <p class="lead">Cullimore's disclosed law-practice employer is KCJR, LLC. A second entity, Fuerza Legal, LLC, sits underneath it — and his wife Heather is a named member of the parent entity.</p>
+
+  <div class="entity-diagram">
+    <svg width="100%" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Entity relationship diagram</title>
+      <desc>Sen. Kirk Cullimore Jr. is manager and registered agent of KCJR LLC, and a direct member of Fuerza Legal LLC. KCJR LLC is also a member and registered agent of Fuerza Legal LLC.</desc>
+      <defs>
+        <marker id="cullarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#8C3B44" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
+      <style>
+        .ce-box{fill:#F3ECE0;stroke:#6E1F2B;stroke-width:1;}
+        .ce-label{font-family:'Source Sans 3',sans-serif;font-size:15px;fill:#211714;}
+        .ce-arrlabel{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#4A3B35;}
+        .ce-arrlabel-bg{fill:#F3ECE0;opacity:0.92;}
+      </style>
+      <rect class="ce-box" x="240" y="20" width="200" height="50" rx="4"/>
+      <text class="ce-label" x="340" y="50" text-anchor="middle">Sen. Kirk Cullimore Jr.</text>
+      <rect class="ce-box" x="360" y="180" width="140" height="50" rx="4"/>
+      <text class="ce-label" x="430" y="210" text-anchor="middle">KCJR LLC</text>
+      <rect class="ce-box" x="240" y="330" width="200" height="50" rx="4"/>
+      <text class="ce-label" x="340" y="360" text-anchor="middle">Fuerza Legal LLC</text>
+      <path d="M330 70 C 300 130, 300 280, 330 330" fill="none" stroke="#8C3B44" stroke-width="1" marker-end="url(#cullarrow)"/>
+      <rect class="ce-arrlabel-bg" x="220" y="185" width="120" height="34"/>
+      <text class="ce-arrlabel" x="230" y="200">Direct member</text>
+      <path d="M395 70 C 405 100, 415 140, 420 178" fill="none" stroke="#8C3B44" stroke-width="1" marker-end="url(#cullarrow)"/>
+      <rect class="ce-arrlabel-bg" x="355" y="95" width="230" height="48"/>
+      <text class="ce-arrlabel" x="360" y="112">Manager and registered</text>
+      <text class="ce-arrlabel" x="360" y="130">agent</text>
+      <path d="M420 230 C 400 265, 380 300, 360 328" fill="none" stroke="#8C3B44" stroke-width="1" marker-end="url(#cullarrow)"/>
+      <rect class="ce-arrlabel-bg" x="355" y="255" width="230" height="48"/>
+      <text class="ce-arrlabel" x="360" y="272">Member and registered</text>
+      <text class="ce-arrlabel" x="360" y="290">agent</text>
+    </svg>
+  </div>
+
+  <p><strong>KCJR, LLC</strong> — formed April 20, 2021, "legal and consulting services." The original Certificate of Organization lists two members: Kirk Cullimore and his wife, Heather Cullimore, both at the same Draper address. It's KCJR that appears on his conflict of interest filings as his employer.</p>
+  <p><strong>Fuerza Legal, LLC</strong> — formed July 3, 2024. KCJR, LLC is both a member and its registered agent; Cullimore is also a direct member. No public-facing practice presence exists under this name. It doesn't appear by name on his disclosure filings, though it's unconfirmed whether it's meant to be captured under the KCJR listing itself. This is presented as documented entity structure, not a claimed disclosure gap.</p>
+  <div class="sources"><strong>Sources</strong><br>Utah Division of Corporations: KCJR, LLC, Entity 12269568-0160, Certificate of Organization filed 4/20/2021. Fuerza Legal, LLC, Entity 14068190-0160, filed 7/3/2024.</div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h3>The Weber County Hive · Utah Senators</h3>
+    <p>Legislator profile pages — full board seats, sponsored bills, votes, and campaign finance for individual Utah senators — built exclusively from primary documents.</p>
+    <div class="links">
+      <a href="index.html">All senators</a>
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-scroll-to]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-scroll-to'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+
+</body>
+</html>
