@@ -217,7 +217,7 @@
     padding-right:6px;
     border-right:1px solid rgba(180,134,60,.35);
   }
-  nav.jump a{
+  nav.jump a, nav.jump button{
     flex:0 0 auto;
     background:rgba(255,255,255,.06);
     border:1px solid rgba(255,255,255,.14);
@@ -231,8 +231,12 @@
     padding:6px 14px;
     white-space:nowrap;
     transition:background .15s, color .15s, border-color .15s;
+    -webkit-appearance:none;
+    appearance:none;
   }
-  nav.jump a:hover{background:var(--gold);border-color:var(--gold);color:var(--void);}
+  nav.jump a:hover, nav.jump button:hover{background:var(--gold);border-color:var(--gold);color:var(--void);}
+
+  .movement{scroll-margin-top:64px;}
 
   .movement{
     display:flex; align-items:center; gap:18px;
@@ -401,6 +405,47 @@
 
   .entity-diagram{margin:24px 0;padding:16px;background:#fff;border:1px solid var(--line);}
 
+  .full-sources{border:1px solid var(--line);background:#fff;margin:8px 0 0;}
+  .full-sources summary{
+    cursor:pointer;
+    list-style:none;
+    padding:16px 22px;
+    background:var(--paper-dim);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .full-sources summary::-webkit-details-marker{display:none;}
+  .full-sources summary .fs-toggle{
+    font-family:'Fraunces',serif;
+    font-size:16px;
+    color:var(--maroon);
+  }
+  .full-sources[open] summary .fs-toggle{transform:rotate(45deg);display:inline-block;}
+  .full-sources-body{padding:22px 24px 28px;}
+  .full-sources-body h4{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--ink);
+    margin:24px 0 8px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .full-sources-body h4:first-child{margin-top:0;padding-top:0;border-top:none;}
+  .full-sources-body p{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.75;
+    margin:0;
+  }
+
   footer.site-footer{
     margin-top:60px;
     background:var(--void);
@@ -565,13 +610,13 @@
 <nav class="jump">
   <div class="wrap">
     <span class="jump-label">Jump to →</span>
-    <a href="#m1">1. Majority Leader</a>
-    <a href="#m2">2. The Insurance Co.</a>
-    <a href="#m3">3. The Institute</a>
-    <a href="#m4">4. The Money</a>
-    <a href="#m5">5. The Bills</a>
-    <a href="#m6">6. The Entities</a>
-    <a href="#m7">7. SB 213</a>
+    <button type="button" data-scroll-to="m1">1. Majority Leader</button>
+    <button type="button" data-scroll-to="m2">2. The Insurance Co.</button>
+    <button type="button" data-scroll-to="m3">3. The Institute</button>
+    <button type="button" data-scroll-to="m4">4. The Money</button>
+    <button type="button" data-scroll-to="m5">5. The Bills</button>
+    <button type="button" data-scroll-to="m6">6. The Entities</button>
+    <button type="button" data-scroll-to="m7">7. SB 213</button>
   </div>
 </nav>
 
@@ -582,6 +627,8 @@
 <section class="section">
   <h2>Six confirmation committees, and a family-first campaign</h2>
   <p class="lead">Sen. Kirk A. Cullimore Jr. (SD-19) has served since 2019 and became Senate Majority Leader on January 21, 2025. He's an attorney, a former music teacher and small-business owner, and — per his own campaign site — the father of six raising his family in Sandy with his wife, Heather. His public framing is "Family Comes First"; his committee footprint is one of the broadest in the Senate.</p>
+
+  <div class="def-inline"><strong>The seat</strong> — Senate District 19 covers parts of Salt Lake and Utah counties, including Sandy, Draper, Cottonwood Heights, and Alta. Cullimore is on the 2026 ballot; his opponent in the November 3 general election is Democrat Shana Anderson. He won the seat in 2022 with 58.4% of the vote, and forecasters have rated the district Safe Republican for 2026 — Anderson's own campaign describes it as a "battleground district." A contrast between the two candidates follows separately.</div>
 
   <div class="void-panel">
     <div class="void-label">His committee seats</div>
@@ -696,7 +743,32 @@
   </div>
 
   <p>Cullimore's donor base also includes the Utah Apartment Association, recurring at $3,500-$5,000 — the association he served as government affairs chair for, per his own Senate bio.</p>
-  <div class="sources"><strong>Sources</strong><br>DEX campaign finance exports, disclosures.utah.gov, "Cullimore Kirk" filings 2022-2026 (Convention, Primary, General, Year End reports). Utahns for Balanced Government PIC filings, same source.</div>
+
+  <div class="void-panel">
+    <div class="void-label">2026 general election</div>
+    <div class="void-quote" style="font-size:16px;">SD-19 is one of fifteen Utah Senate districts on the ballot this November. Cullimore faces Democrat Shana Anderson. He won the seat in 2022 with 58.4% of the vote — a district forecasters rate Safe Republican, though Anderson's campaign describes it as a battleground.</div>
+  </div>
+
+  <h3 style="font-size:21px;margin:34px 0 14px;">A July 2026 contribution batch</h3>
+  <p>Twelve contributions totaling $29,000 were reported between July 8 and July 29, 2026, in the run-up to the general election.</p>
+
+  <table class="vote-table">
+    <tr><th>Date</th><th>Contributor</th><th>Amount</th></tr>
+    <tr class="contested"><td class="mono">7/8/2026</td><td>Nexiuum, LLC</td><td class="tally">$10,000</td></tr>
+    <tr><td class="mono">7/17/2026</td><td>Fresh Air PAC</td><td class="tally">$2,500</td></tr>
+    <tr><td class="mono">7/8/2026</td><td>Stokes Strategies</td><td class="tally">$500</td></tr>
+    <tr><td class="mono">7/8/2026</td><td>MJH Advisors</td><td class="tally">$500</td></tr>
+  </table>
+
+  <div class="doc-card">
+    <div class="doc-tag">Nexiuum, LLC — American Fork</div>
+    <blockquote>A sourcing and fulfillment company for consumer products, formed December 2023, with roughly a dozen employees. Its sole listed manager, Jason Plant, has a background in real estate and mortgage lending. No lobbyist registration, prior Utah political giving, or business relationship to Cullimore's committee work has been located.</blockquote>
+    <div class="doc-source">The $10,000 contribution is the largest single check in the July batch, and the largest single-source contribution to Cullimore found anywhere in this record outside his established institutional donor base. What it's for is not established by the public record.</div>
+  </div>
+
+  <p>Fresh Air PAC is the political arm of Stewardship Utah, formerly O2 Utah — the organization Cullimore partnered with to build "Prosperity 2030," his 2021 air-quality framework, and whose founder, David Garbett, chairs the PAC today. Cullimore has also sponsored or floor-sponsored HB126 (2024, emissions caps) and HB420 (2025, halogen emissions authority) since that partnership began. Stokes Strategies and MJH Advisors are both registered Utah lobbying firms with broad, multi-industry client rosters; contributions from each are consistent with the rest of his institutional donor base.</p>
+
+  <div class="sources"><strong>Sources</strong><br>DEX campaign finance exports, disclosures.utah.gov, "Cullimore Kirk" filings 2022-2026 (Convention, Primary, General, Year End reports, including the July 2026 filing period). Utahns for Balanced Government PIC filings, same source. Utah Division of Corporations, Nexiuum LLC, Entity 13739142-0160. Utah PAC registration, Fresh Air PAC, disclosures.utah.gov. Ballotpedia, Utah State Senate District 19, 2026 and 2022 general election results.</div>
 </section>
 
 <!-- ============ MOVEMENT V ============ -->
@@ -800,6 +872,59 @@
   <div class="sources"><strong>Sources</strong><br>The Salt Lake Tribune, Aug. 2025. Deseret News, Aug. 2025. KSL.com, KSL NewsRadio, KSLTV, Aug. 2025. Utah News Dispatch, Aug. 2025. Newsweek, Aug. 2025.</div>
 </section>
 
+<div class="movement" id="sources-full">
+  <span class="num">§</span><span class="rule"></span><span class="label">Full Sources</span>
+</div>
+<section class="section" style="padding-bottom:20px;">
+  <details class="full-sources">
+    <summary>Every source used in this piece, by movement <span class="fs-toggle">+</span></summary>
+    <div class="full-sources-body">
+
+      <h4>I. Majority Leader</h4>
+      <p>le.utah.gov official legislator page and committee rosters, 2026 session.<br>
+      kirkcullimore.com/meet-kirk (campaign website, self-description).<br>
+      Ballotpedia, "Utah State Senate District 19," district composition and 2026 candidates.<br>
+      iVoterGuide, "2026 General Election — Utah State Senate, District 19."</p>
+
+      <h4>II. The Insurance Company</h4>
+      <p>A-CAP / Business Wire press release, "A-CAP Appoints Kirk Cullimore as President of Sentinel Security Life," April 2, 2026, 6:13 PM ET.<br>
+      Cullimore conflict of interest filings, disclosures.utah.gov, 1/2/2026 (×2) and 7/2/2026.<br>
+      Utah Code Title 20A, Chapter 11, Part 16, Conflict of Interest Disclosures.<br>
+      NAIC company database, Sentinel Security Life Insurance Company, NAIC code 68802.</p>
+
+      <h4>III. The Institute</h4>
+      <p>Enrolled H.B. 530 (2025), Utah Code 53B-37-102(3) and 53B-37-201.<br>
+      Nucleus Institute Articles of Incorporation, Utah Division of Corporations, Entity 14656796-0140, filed 1/30/2026.<br>
+      nucleusutah.org sitemap and "Our Team" page.<br>
+      Cullimore conflict of interest filings, disclosures.utah.gov.</p>
+
+      <h4>IV. The Money</h4>
+      <p>DEX campaign finance exports, disclosures.utah.gov, "Cullimore Kirk" filings 2022-2026 (Convention, Primary, General, Year End reports, including the July 2026 filing period).<br>
+      Utahns for Balanced Government PIC filings, disclosures.utah.gov.<br>
+      Utah Division of Corporations, Nexiuum, LLC, Entity 13739142-0160, Certificate of Organization filed 12/22/2023.<br>
+      Utah PAC registration, Fresh Air PAC, disclosures.utah.gov.<br>
+      Ballotpedia, "Utah State Senate District 19," 2026 and 2022 general election results.</p>
+
+      <h4>V. The Bills</h4>
+      <p>le.utah.gov, Browse Bills by Legislator, 2026 General Session.<br>
+      Cullimore conflict of interest filings, disclosures.utah.gov.<br>
+      DEX campaign finance exports, disclosures.utah.gov.</p>
+
+      <h4>VI. The Entities</h4>
+      <p>Utah Division of Corporations: KCJR, LLC, Entity 12269568-0160, Certificate of Organization filed 4/20/2021.<br>
+      Fuerza Legal, LLC, Entity 14068190-0160, filed 7/3/2024.</p>
+
+      <h4>VII. SB 213</h4>
+      <p>The Salt Lake Tribune, August 2025.<br>
+      Deseret News, August 2025.<br>
+      KSL.com, KSL NewsRadio, KSLTV, August 2025.<br>
+      Utah News Dispatch, August 2025.<br>
+      Newsweek, August 2025.</p>
+
+    </div>
+  </details>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <h3>The Weber County Hive · Utah Senators</h3>
@@ -811,6 +936,22 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('[data-scroll-to]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-scroll-to'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  var fs = document.querySelector('.full-sources');
+  if (fs) {
+    fs.addEventListener('toggle', function () {
+      var t = fs.querySelector('.fs-toggle');
+      if (t) t.textContent = fs.open ? '×' : '+';
+    });
+  }
+</script>
 
 </body>
 </html>
