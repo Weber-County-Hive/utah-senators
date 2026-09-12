@@ -55,7 +55,7 @@
   .topbar a:hover{opacity:1;color:#fff;}
 
   header.masthead{
-    padding:72px 24px 48px;
+    padding:72px 24px 40px;
     border-bottom:3px solid var(--void);
     max-width:var(--max);
     margin:0 auto;
@@ -87,10 +87,94 @@
     line-height:1.5;
   }
 
+  /* ---- Controls bar ---- */
+  .controls{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:28px 24px 0;
+  }
+  .controls-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    align-items:center;
+  }
+  .search-wrap{
+    position:relative;
+    flex:1 1 260px;
+    min-width:220px;
+  }
+  .search-wrap input{
+    width:100%;
+    font-family:'Source Sans 3',sans-serif;
+    font-size:15px;
+    padding:11px 16px 11px 38px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fff;
+    color:var(--ink);
+  }
+  .search-wrap input:focus{outline:2px solid var(--maroon);outline-offset:-1px;}
+  .search-wrap::before{
+    content:"⌕";
+    position:absolute;left:13px;top:50%;transform:translateY(-50%);
+    color:var(--ink-soft);font-size:17px;pointer-events:none;
+  }
+  .filter-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
+  }
+  .filter-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    margin-right:2px;
+  }
+  select.year-select{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:9px 12px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fff;
+    color:var(--ink);
+    cursor:pointer;
+  }
+  .pill-btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    background:#fff;
+    border:1px solid var(--line);
+    color:var(--ink);
+    padding:8px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .pill-btn:hover{border-color:var(--maroon);}
+  .pill-btn.active{
+    background:var(--maroon);
+    color:#fff;
+    border-color:var(--maroon);
+  }
+  .pill-btn .count{opacity:.7;font-size:11px;margin-left:3px;}
+  .result-count{
+    max-width:var(--max);
+    margin:14px auto 0;
+    padding:0 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
   .roster{
     max-width:var(--max);
     margin:0 auto;
-    padding:56px 24px 80px;
+    padding:24px 24px 80px;
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
     gap:24px;
@@ -110,6 +194,7 @@
     transform:translateY(-2px);
     box-shadow:0 8px 24px rgba(24,18,16,.10);
   }
+  .card[data-status="former"]{border-left-color:var(--ink-soft);}
   .card .role-tag{
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;
@@ -117,6 +202,19 @@
     text-transform:uppercase;
     color:var(--maroon);
     margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .card[data-status="former"] .role-tag{color:var(--ink-soft);}
+  .status-chip{
+    font-size:9.5px;
+    padding:2px 7px;
+    border-radius:10px;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    letter-spacing:.04em;
   }
   .card h2{
     font-size:23px;
@@ -138,6 +236,7 @@
     text-transform:uppercase;
     color:var(--maroon);
   }
+  .card[data-status="former"] .read{color:var(--ink-soft);}
   .card .tags{
     display:flex;
     flex-wrap:wrap;
@@ -152,6 +251,20 @@
     padding:3px 8px;
     color:var(--ink-soft);
   }
+  .card[data-hidden="true"]{display:none;}
+
+  .empty-state{
+    grid-column:1/-1;
+    text-align:center;
+    padding:40px 20px;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13.5px;
+    border:1px dashed var(--line);
+    border-radius:4px;
+    display:none;
+  }
+  .empty-state.show{display:block;}
 
   .placeholder-card{
     border:1px dashed var(--line);
@@ -182,7 +295,8 @@
 
   @media(max-width:600px){
     header.masthead{padding:48px 18px 32px;}
-    .roster{padding:40px 18px 60px;}
+    .controls{padding:24px 18px 0;}
+    .roster{padding:20px 18px 60px;}
   }
 </style>
 </head>
@@ -196,39 +310,33 @@
 <header class="masthead">
   <div class="eyebrow">Legislator Profiles</div>
   <h1 class="title">Utah <em>Senators</em>, Documented</h1>
-  <p class="dek">Full board seats, sponsored bills, votes, and campaign finance for individual Utah senators — one profile per senator, built exclusively from primary documents. A House companion series is planned.</p>
+  <p class="dek">Full board seats, sponsored bills, votes, and campaign finance for individual Utah senators — one profile per senator, built exclusively from primary documents. A senator who loses re-election or leaves office stays on this roster under the last year they served, rather than disappearing. A House companion series is planned.</p>
 </header>
 
-<div class="roster">
-
-  <a class="card" href="jerry-stevenson.html">
-    <div class="role-tag">SD-6 · Outgoing</div>
-    <h2>Jerry Stevenson</h2>
-    <p class="summary">MIDA Vice Chair who personally sponsored the bill expanding MIDA's own powers — then watched his board use it on Stratos 13 months later. Also a UIPA board member who personally moved a $5M developer loan, twice.</p>
-    <div class="tags">
-      <span class="tag">MIDA</span>
-      <span class="tag">SB 316</span>
-      <span class="tag">UIPA</span>
-      <span class="tag">Executive Appropriations</span>
+<div class="controls">
+  <div class="controls-row">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search by name, district, or topic…" autocomplete="off">
     </div>
-    <div class="read">Read profile →</div>
-  </a>
-
-  <a class="card" href="kirk-cullimore.html">
-    <div class="role-tag">SD-19 · Senate Majority Leader</div>
-    <h2>Kirk Cullimore</h2>
-    <p class="summary">President of a state-regulated insurance company, disclosed 91 days late. An apparent board seat on the innovation institute he helped create — and helped exempt from public records law. His own campaign has paid one operative nearly $79,000.</p>
-    <div class="tags">
-      <span class="tag">Sentinel Security Life</span>
-      <span class="tag">Nucleus Institute</span>
-      <span class="tag">Irish Elk LLC</span>
-      <span class="tag">Confirmation Committee</span>
+    <div class="filter-group">
+      <span class="filter-label">Year</span>
+      <select class="year-select" id="yearSelect"></select>
     </div>
-    <div class="read">Read profile →</div>
-  </a>
+  </div>
+  <div class="controls-row" style="margin-top:12px;">
+    <div class="filter-group">
+      <span class="filter-label">Status</span>
+      <button class="pill-btn active" data-status="all">All <span class="count" id="countAll"></span></button>
+      <button class="pill-btn" data-status="current">Current <span class="count" id="countCurrent"></span></button>
+      <button class="pill-btn" data-status="former">Former <span class="count" id="countFormer"></span></button>
+    </div>
+  </div>
+</div>
 
-  <div class="placeholder-card">More senator profiles coming</div>
+<p class="result-count" id="resultCount"></p>
 
+<div class="roster" id="roster">
+  <div class="empty-state" id="emptyState">No senators match this search. Try a different name, district, or year.</div>
 </div>
 
 <footer class="site-footer">
@@ -241,6 +349,161 @@
     </div>
   </div>
 </footer>
+
+<script src="senators-data.js"></script>
+<script>
+(function(){
+  // Guard: senators-data.js must load before this script runs. If it's missing
+  // from the repo (or the <script src> tag above is broken), fail loudly on
+  // the page instead of silently showing an empty roster.
+  if(typeof SENATORS === 'undefined'){
+    document.getElementById('roster').innerHTML =
+      '<div class="empty-state show" style="grid-column:1/-1;border-color:#a3392a;color:#a3392a;">' +
+      '<strong>senators-data.js did not load.</strong><br>Make sure senators-data.js is uploaded ' +
+      'in the same folder as this index.html file, then refresh the page.</div>';
+    return;
+  }
+
+  var CURRENT_YEAR = new Date().getFullYear();
+  var roster = document.getElementById('roster');
+  var emptyState = document.getElementById('emptyState');
+  var searchInput = document.getElementById('searchInput');
+  var yearSelect = document.getElementById('yearSelect');
+  var resultCount = document.getElementById('resultCount');
+  var statusBtns = Array.prototype.slice.call(document.querySelectorAll('.pill-btn'));
+  var activeStatus = 'all';
+
+  // Build year dropdown from data: every year from the earliest yearStart
+  // through the current year, plus "All years".
+  var years = [];
+  SENATORS.forEach(function(s){
+    var start = s.yearStart || CURRENT_YEAR;
+    var end = s.yearEnd || CURRENT_YEAR;
+    for(var y = start; y <= end; y++){ if(years.indexOf(y) === -1) years.push(y); }
+  });
+  years.sort(function(a,b){ return b - a; });
+  var allOpt = document.createElement('option');
+  allOpt.value = 'all';
+  allOpt.textContent = 'All years';
+  yearSelect.appendChild(allOpt);
+  years.forEach(function(y){
+    var opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
+    yearSelect.appendChild(opt);
+  });
+  yearSelect.value = 'all';
+
+  function servedInYear(s, year){
+    if(year === 'all') return true;
+    year = parseInt(year, 10);
+    var start = s.yearStart || CURRENT_YEAR;
+    var end = s.yearEnd || CURRENT_YEAR;
+    return year >= start && year <= end;
+  }
+
+  function matchesSearch(s, query){
+    if(!query) return true;
+    query = query.toLowerCase();
+    var haystack = [s.name, s.district, s.districtName, s.role, s.summary]
+      .concat(s.tags || [])
+      .join(' ')
+      .toLowerCase();
+    return haystack.indexOf(query) !== -1;
+  }
+
+  function renderCards(){
+    // Clear existing cards (keep emptyState node)
+    Array.prototype.slice.call(roster.querySelectorAll('.card, .placeholder-card')).forEach(function(el){ el.remove(); });
+
+    var query = searchInput.value.trim();
+    var year = yearSelect.value;
+    var visibleCount = 0;
+
+    SENATORS.forEach(function(s){
+      var matches = matchesSearch(s, query) && servedInYear(s, year) &&
+        (activeStatus === 'all' || s.status === activeStatus);
+      if(!matches) return;
+      visibleCount++;
+
+      var card = document.createElement('a');
+      card.className = 'card';
+      card.setAttribute('data-status', s.status);
+      card.href = s.href;
+
+      var yearLabel = s.status === 'current'
+        ? (s.yearStart ? s.yearStart + '–present' : 'Current')
+        : (s.yearEnd ? 'Served through ' + s.yearEnd : 'Former');
+
+      var roleTag = document.createElement('div');
+      roleTag.className = 'role-tag';
+      roleTag.innerHTML = s.district + (s.districtName ? ' · ' + s.districtName : '') +
+        (s.role ? ' · ' + s.role : '') +
+        ' <span class="status-chip">' + yearLabel + '</span>';
+      card.appendChild(roleTag);
+
+      var h2 = document.createElement('h2');
+      h2.textContent = s.name;
+      card.appendChild(h2);
+
+      var p = document.createElement('p');
+      p.className = 'summary';
+      p.textContent = s.summary;
+      card.appendChild(p);
+
+      if(s.tags && s.tags.length){
+        var tagsWrap = document.createElement('div');
+        tagsWrap.className = 'tags';
+        s.tags.forEach(function(t){
+          var tag = document.createElement('span');
+          tag.className = 'tag';
+          tag.textContent = t;
+          tagsWrap.appendChild(tag);
+        });
+        card.appendChild(tagsWrap);
+      }
+
+      var read = document.createElement('div');
+      read.className = 'read';
+      read.textContent = 'Read profile →';
+      card.appendChild(read);
+
+      roster.insertBefore(card, emptyState);
+    });
+
+    // Placeholder card only shows with no filters active and room to grow
+    if(query === '' && year === 'all' && activeStatus === 'all'){
+      var placeholder = document.createElement('div');
+      placeholder.className = 'placeholder-card';
+      placeholder.textContent = 'More senator profiles coming';
+      roster.insertBefore(placeholder, emptyState);
+    }
+
+    emptyState.classList.toggle('show', visibleCount === 0);
+    resultCount.textContent = visibleCount + (visibleCount === 1 ? ' profile' : ' profiles') +
+      (query || year !== 'all' || activeStatus !== 'all' ? ' matching your filters' : ' total');
+  }
+
+  function updateCounts(){
+    document.getElementById('countAll').textContent = '(' + SENATORS.length + ')';
+    document.getElementById('countCurrent').textContent = '(' + SENATORS.filter(function(s){return s.status==='current';}).length + ')';
+    document.getElementById('countFormer').textContent = '(' + SENATORS.filter(function(s){return s.status==='former';}).length + ')';
+  }
+
+  searchInput.addEventListener('input', renderCards);
+  yearSelect.addEventListener('change', renderCards);
+  statusBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      activeStatus = btn.getAttribute('data-status');
+      statusBtns.forEach(function(b){ b.classList.toggle('active', b === btn); });
+      renderCards();
+    });
+  });
+
+  updateCounts();
+  renderCards();
+})();
+</script>
 
 </body>
 </html>
