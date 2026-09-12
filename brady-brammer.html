@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brady Brammer — Utah Senators | The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-bg:#F3ECE0;
+    --color-band-light:#6E1F2B;
+    --color-band-deep:#181210;
+    --color-ink:#211714;
+    --color-ink-soft:#4A3B35;
+    --color-link:#6E1F2B;
+    --color-stat:#B4863C;
+    --color-border:#C9BBA4;
+    --color-card:#ffffff;
+    --void:#181210;
+    --void-2:#241A17;
+    --paper-dim:#E9E0D0;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--color-bg);
+    color:var(--color-ink);
+    font-family:'Source Sans 3', sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--color-link);color:#fff;}
+  a{color:var(--color-link);}
+  a:hover{color:#8C3B44;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  .topbar{
+    background:var(--void);
+    color:#E9E0D0;
+    padding:12px 24px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar a{color:#E9E0D0;text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  .breadcrumb{
+    max-width:880px;margin:0 auto;padding:18px 24px 0;
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    color:var(--color-ink-soft);letter-spacing:.03em;
+  }
+  .breadcrumb a{color:var(--color-ink-soft);text-decoration:none;border-bottom:1px dotted var(--color-ink-soft);}
+  header.band{
+    max-width:880px;margin:0 auto;
+    padding:44px 24px 32px;
+    border-bottom:3px solid var(--void);
+  }
+  .band-inner{max-width:880px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;letter-spacing:.12em;font-size:0.78rem;
+    color:var(--color-link);margin-bottom:16px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--color-link);display:inline-block;}
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:2.5rem;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+    margin:0 0 14px;
+    color:var(--color-ink);
+  }
+  .subtitle{
+    font-family:'Source Sans 3', sans-serif;
+    font-style:italic;
+    font-size:1.1rem;
+    color:var(--color-ink-soft);
+    max-width:660px;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px;
+    margin-top:22px;
+  }
+  .meta-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;letter-spacing:.04em;
+    background:var(--paper-dim);
+    border:1px solid var(--color-border);
+    padding:5px 10px;border-radius:3px;
+    color:var(--color-ink-soft);
+  }
+  nav.jump{
+    max-width:880px;margin:0 auto;padding:16px 24px;
+    display:flex;flex-wrap:wrap;gap:8px 14px;
+    font-family:'IBM Plex Mono', monospace;font-size:0.75rem;
+    border-bottom:1px solid var(--color-border);
+  }
+  nav.jump a{
+    text-decoration:none;color:var(--color-ink-soft);
+    padding:4px 0;border-bottom:2px solid transparent;
+  }
+  nav.jump a:hover{border-bottom:2px solid var(--color-link);color:var(--color-ink);}
+  main{max-width:880px;margin:0 auto;padding:8px 24px 60px;}
+  .callout-box{
+    background:#fbf3e6;
+    border:1px solid #e6d3ae;
+    border-left:4px solid var(--color-stat);
+    padding:16px 20px;border-radius:3px;
+    margin:22px 0;font-size:0.98rem;
+  }
+  .callout-box p:first-child{margin-top:0;}
+  .callout-box p:last-child{margin-bottom:0;}
+  section{margin:44px 0;}
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.55rem;
+    border-bottom:2px solid var(--color-link);
+    padding-bottom:8px;
+    margin-bottom:18px;
+  }
+  h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    margin:26px 0 10px;
+  }
+  .stat-strip{
+    display:flex;flex-wrap:wrap;gap:14px;
+    margin:20px 0 26px;
+  }
+  .stat-cell{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-left:3px solid var(--color-link);
+    border-radius:4px;
+    padding:14px 18px;
+    min-width:150px;flex:1;
+  }
+  .stat-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;font-weight:600;
+    color:var(--color-stat);display:block;
+  }
+  .stat-label{font-size:0.78rem;color:var(--color-ink-soft);}
+  .quote-block{
+    border-left:3px solid var(--color-link);
+    margin:20px 0;padding:6px 20px;
+    font-style:italic;color:#3a332d;
+  }
+  .quote-src{
+    display:block;font-style:normal;font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;color:var(--color-ink-soft);margin-top:6px;
+  }
+  .callout-finding{border-left-color:#7a8f5c;background:#f2f4ea;border-color:#d7dcc5;}
+  .callout-note{border-left-color:var(--color-ink-soft);background:#f2efe9;border-color:var(--color-border);}
+  .collective-note{
+    margin-top:16px;padding:12px 16px;background:#f2efe9;
+    border-left:3px solid #8a7250;border-radius:2px;font-size:0.88rem;
+  }
+  .collective-note p{margin:6px 0;}
+  .collective-note strong{font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    text-transform:uppercase;letter-spacing:.03em;color:#6b5738;}
+
+  .filter-bar{
+    max-width:880px;margin:0 auto 8px;padding:0 24px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  }
+  .filter-bar .filter-label{
+    font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--color-ink-soft);
+    margin-right:4px;
+  }
+  .filter-btn{
+    font-family:'IBM Plex Mono', monospace;font-size:0.78rem;
+    background:var(--color-card);border:1px solid var(--color-border);
+    color:var(--color-ink);padding:7px 14px;border-radius:20px;
+    cursor:pointer;transition:all .15s ease;
+  }
+  .filter-btn:hover{border-color:var(--color-link);}
+  .filter-btn.active{
+    background:var(--color-band-light);color:#f4ece2;border-color:var(--color-band-light);
+  }
+  .filter-btn .count{opacity:0.65;font-size:0.72rem;margin-left:3px;}
+  .expand-toggle{
+    margin-left:auto;font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
+    color:var(--color-link);background:none;border:none;cursor:pointer;
+    text-decoration:underline;text-underline-offset:3px;padding:4px;
+  }
+  .no-match-msg{
+    max-width:880px;margin:0 auto;padding:20px 24px;
+    font-family:'IBM Plex Mono', monospace;font-size:0.85rem;
+    color:var(--color-ink-soft);display:none;
+  }
+  .bill-card[data-hidden="true"]{display:none;}
+
+  .dist-bar-wrap{margin:20px 0 28px;}
+  .dist-bar{
+    display:flex;height:34px;border-radius:4px;overflow:hidden;
+    border:1px solid var(--color-border);font-family:'IBM Plex Mono', monospace;
+  }
+  .dist-seg{
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:0.78rem;font-weight:600;cursor:pointer;
+    transition:opacity .15s ease;
+  }
+  .dist-seg:hover{opacity:0.85;}
+  .dist-seg.f{background:#8c2f2f;}
+  .dist-seg.d{background:#b5652e;}
+  .dist-seg.c{background:#b5952e;color:#3a2e0e;}
+  .dist-seg.b{background:#4f7a4f;}
+  .dist-legend{
+    display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;
+    font-family:'IBM Plex Mono', monospace;font-size:0.75rem;color:var(--color-ink-soft);
+  }
+  .dist-legend span.swatch{
+    display:inline-block;width:10px;height:10px;border-radius:2px;
+    margin-right:5px;vertical-align:-1px;
+  }
+  th.sortable{cursor:pointer;user-select:none;position:relative;}
+  th.sortable:hover{background:#ded0b0;}
+  th.sortable .arrow{font-size:0.7rem;margin-left:4px;opacity:0.5;}
+  th.sortable.sorted .arrow{opacity:1;}
+  table.rubric{
+    width:100%;border-collapse:collapse;margin:18px 0;
+    font-size:0.9rem;background:var(--color-card);
+  }
+  table.rubric th, table.rubric td{
+    border:1px solid var(--color-border);
+    padding:10px 12px;text-align:left;
+  }
+  table.rubric th{
+    font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
+    text-transform:uppercase;letter-spacing:.04em;
+    background:var(--paper-dim);
+  }
+  .grade{font-weight:700;font-family:'IBM Plex Mono',monospace;}
+  ul.tidy li{margin-bottom:8px;}
+  details.sources{
+    background:var(--color-card);border:1px solid var(--color-border);
+    border-radius:4px;padding:14px 20px;margin-top:14px;
+  }
+  details.sources summary{
+    cursor:pointer;font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;font-weight:600;
+  }
+  details.sources ul{padding-left:20px;font-size:0.9rem;}
+  footer.site-footer{
+    background:var(--void);
+    color:#E9E0D0;
+    padding:40px 24px 50px;
+    margin-top:20px;
+  }
+  footer.site-footer .footer-wrap{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{font-family:'Fraunces',serif;font-weight:600;color:#fff;font-size:20px;margin:0;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--color-stat);text-decoration:none;font-family:'IBM Plex Mono', monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+  .flag{color:#a24a2b;font-weight:600;}
+  .verified{color:#4a6b3a;font-weight:600;}
+
+  .bill-card{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-left:4px solid var(--color-link);
+    border-radius:6px;
+    margin:16px 0 28px;
+    overflow:hidden;
+  }
+  .bill-summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 20px;
+    background:var(--paper-dim);
+  }
+  .bill-summary::-webkit-details-marker{display:none;}
+  .bill-summary-text{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--color-ink);
+  }
+  .bill-summary-sub{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    font-weight:500;
+    color:var(--color-ink-soft);
+    margin-top:4px;
+    letter-spacing:.02em;
+  }
+  .bill-summary-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .toggle-hint{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--color-ink-soft);}
+  .grade-badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:700;
+    font-size:1rem;
+    width:2.4em;height:2.4em;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fffdf8;
+    flex-shrink:0;
+  }
+  .grade-a{background:#4a7a4a;}
+  .grade-b{background:#7a8f5c;}
+  .grade-c{background:#c98a2e;}
+  .grade-d{background:#b5602e;}
+  .grade-f{background:#a3392a;}
+  .grade-na{background:#8c8477;font-size:0.65rem;}
+  .bill-body{padding:6px 20px 22px;}
+  .bill-body p:first-child{margin-top:4px;}
+  details[open] .toggle-hint.closed-only{display:none;}
+  details:not([open]) .toggle-hint.open-only{display:none;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>The Weber County Hive · Utah Senators</span>
+  <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+</div>
+
+<div class="breadcrumb"><a href="index.html">Utah Senators</a> / Senate District 21 / Brady Brammer</div>
+
+<header class="band">
+  <div class="band-inner">
+    <div class="eyebrow">Case File · Senate District 21 · Highland</div>
+    <h1>Brady Brammer: The Architecture of Power</h1>
+    <p class="subtitle">A Senate seat partly funded by a PAC his wife helps run, a family of judicial bills that concentrate case-control in the offices his own party controls, and 18 sponsored bills graded — the poor ones touch nearly the whole state; the good ones touch a few thousand people at most.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Republican, SD 21 (since Jan. 2025)</span>
+      <span class="meta-pill">2026 General: Brammer (R) vs. Kandee Myers vs. Wayne Woodfield</span>
+      <span class="meta-pill">$217,005.41 raised / $126,319.31 spent (2024–2026)</span>
+      <span class="meta-pill">18 bills graded · 2 F, 6 D-range, 6 C-range, 4 B-range</span>
+    </div>
+  </div>
+</header>
+
+<nav class="jump">
+  <a href="#race">The Race</a>
+  <a href="#doers">Doers Network</a>
+  <a href="#sb0230">SB0230</a>
+  <a href="#judicial">Judicial Bills</a>
+  <a href="#network">Legislative Network</a>
+  <a href="#sb0145">SB0145</a>
+  <a href="#sb0235">SB0235</a>
+  <a href="#sb0234">SB0234</a>
+  <a href="#hb0575">HB0575</a>
+  <a href="#hb0591">HB0591</a>
+  <a href="#sb0068">SB0068</a>
+  <a href="#hb0280">HB0280</a>
+  <a href="#hb0017">HB0017</a>
+  <a href="#sjr001">SJR001</a>
+  <a href="#donors">Donor Base</a>
+  <a href="#rubric">Scorecard</a>
+  <a href="#questions">Questions Worth Asking</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<div class="filter-bar">
+  <span class="filter-label">Filter bills:</span>
+  <button class="filter-btn active" data-filter="all">All <span class="count">(18)</span></button>
+  <button class="filter-btn" data-filter="B">Good <span class="count">(4)</span></button>
+  <button class="filter-btn" data-filter="C">Mixed <span class="count">(6)</span></button>
+  <button class="filter-btn" data-filter="D">Poor <span class="count">(6)</span></button>
+  <button class="filter-btn" data-filter="F">Failing <span class="count">(2)</span></button>
+  <button class="expand-toggle" id="expandToggle">Expand all</button>
+</div>
+
+<main>
+
+<div class="callout-box">
+<p><strong>New here?</strong> Brady Brammer is a Republican attorney representing Senate District 21 (Highland, Utah County). He previously served in the Utah House (2019–2025) before Utah County Republican delegates selected him to fill a Senate vacancy in late 2024. This file documents his 2026 re-election field, his campaign finance record, his family's tie to a PAC that has funded his campaign, and a bill he sponsored that two banks helped present on the floor — both banks are also campaign donors. Where Brammer has responded on the record to questions raised by this reporting, his full response is included.</p>
+</div>
+
+<section id="race">
+<h2>1. The Race</h2>
+<p>Brammer was chosen by convention delegates to fill Senate District 21 after Mike Kennedy's departure, then ran and won in 2024. Seth Stewart, who had originally filed for this seat, withdrew in March 2026 to pursue a federal congressional race, leaving a two-person Republican primary between Brammer and Kelly Smith, a Cedar Hills City Council member and retired educator. Brammer won that June 23 primary and goes into the general election against Kandee Myers (Americans Elect) and Wayne Woodfield (Forward Party).</p>
+<div class="callout-box">
+<p><strong>A PAC formed over judicial independence funded his primary opponent.</strong> Smith's signature-gathering was paid for by the "Checks and Balances PAC" (also filing as "Rule of Law PAC") — a group whose own stated purpose is defending an independent judiciary in Utah. Smith received $14,627.99 in in-kind signature-gathering plus $8,000 cash from this PAC, out of roughly $65,000 she raised total. The same PAC also funded a signature-gathering effort for Scott Stephenson, the primary opponent of Rep. Jordan Teuscher — Teuscher being HB0366's own House chief sponsor, a bill documented in this file's Judicial Bills section. Brammer and Teuscher jointly asked the Lt. Governor's office to investigate the PAC over late disclosure filings; it was fined $1,000 in June 2026. Brammer's own reports, meanwhile, contain 17 deleted transaction entries — worth keeping in view for balance rather than scrutinizing only the PAC that opposed him.</p>
+</div>
+<p>Myers, a real estate broker running as an independent-minded "Americans Elect" candidate, reported $17,807.66 raised — roughly $15,000 of it from her own household (a $10,000 contribution from her husband plus $5,000 in self-contributions) — against $12,537.78 spent. Her expenditures include several gifts to civic and voter-education groups (Mormon Women for Ethical Government, the League of Women Voters, the Women's Democratic Club of Utah, and the Utah County Democratic Party), a pattern that leans toward Democratic-aligned civic organizations despite her non-major-party registration.</p>
+
+<div class="stat-strip">
+  <div class="stat-cell"><span class="stat-num">$217,005</span><span class="stat-label">Total raised, Brammer, 2024–2026 (combined reports)</span></div>
+  <div class="stat-cell"><span class="stat-num">$126,319</span><span class="stat-label">Total spent, same period</span></div>
+  <div class="stat-cell"><span class="stat-num">17</span><span class="stat-label">Deleted transaction entries found across his reports</span></div>
+  <div class="stat-cell"><span class="stat-num">$17,808</span><span class="stat-label">Myers total raised, ~84% from her own household</span></div>
+</div>
+</section>
+
+<section id="doers">
+<h2>2. The Doers Network Connection</h2>
+<p>Brammer's campaign received $7,000 from the Doers Network — $2,000 on April 27, 2026, and $5,000 on June 4, 2026 — from a Delaware-registered entity that has separately funded other Utah candidates and bill sponsors documented elsewhere in this project.</p>
+<div class="callout-box">
+<p><strong>The lead fact:</strong> Brady's wife, Nicki Brammer, is listed on the Doers Network's own website as its Utah County Board Chair. Her household's connection to the organization's leadership is not disclosed alongside the $7,000 the group gave to her husband's campaign.</p>
+</div>
+<p>Nicki Brammer separately ran for and won a seat on the Aspen Peaks School District Board (Seat 3, representing Highland and Lehi), taking office in January 2026. Her own campaign finance report shows $3,550 raised, of which $3,500 — 98.6% — came directly from the Brammer household: $1,500 loaned by Nicki herself and $2,000 contributed by Brady.</p>
+</section>
+
+<section id="sb0230">
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">3. SB0230, Consumer Credit Amendments
+    <span class="bill-summary-sub">Chief sponsor · Signed into law, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C+</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>SB0230 changes how prepayment penalties work on certain consumer loans, removing an exception that had allowed prepayment fees on a specific category of dwelling-secured loans (subordinate-lien loans outside federal Regulation Z, such as second mortgages and HELOCs) while prohibiting contingent prepayment penalties generally.</p>
+
+<h3>Who helped present it</h3>
+<ul class="tidy">
+<li><strong>Senate Business and Labor Committee, Feb. 6, 2026:</strong> Brammer presented the bill "with the assistance of Candice Pitcher, General Counsel, First Electronic Bank." Kent Landvatter, Chairman and CEO of FinWise Bancorp, also spoke to the committee.</li>
+<li><strong>House Business, Labor, and Commerce Committee, Feb. 27, 2026:</strong> Landvatter again gave public comment when the bill was presented. It passed 9-0-7 and moved to the Consent Calendar with no further debate. <strong>House final passage, March 4, 2026: 69-0-6</strong> — genuinely unanimous, with Democrats and Republicans both voting yes.</li>
+</ul>
+
+<h3>Who gave to the campaign</h3>
+<ul class="tidy">
+<li><strong>FinWise Bank</strong> gave Brammer's campaign $3,500 on June 3, 2026.</li>
+<li>UCL PAC gave Brammer $6,000 across two gifts; one of UCL PAC's donors, Tosh, Inc., is the parent company of Check City, a payday-lending and check-cashing chain. Check City's core business does not typically involve prepayment penalties, so the bill's substance does not appear connected to that donor's business model.</li>
+<li><strong>Security Finance Corp</strong>, a consumer installment-lending company, gave Brammer's campaign $1,500 directly on June 25, 2026 — after SB0230 had already passed and taken effect. This is a direct gift from a consumer lender, not routed through a PAC.</li>
+</ul>
+
+<div class="callout-box">
+<p><strong>Brammer's response, on the record:</strong> Brammer states the bill was brought to him by "the banking community," describes it as a "commonsense clarification" separating a disclosed, agreed-upon finance charge from a contingent early-payment penalty, and says it passed unanimously with bipartisan support and no organized consumer opposition. He says he did not know FinWise planned to contribute to his campaign when the bill was requested, drafted, or presented, and that Candice Pitcher's role was to explain the technical structure of these lending transactions, not to direct the bill's contents. He describes his own "take all donations or none" policy as applying to his personal campaign only, not the separate Senate campaign committee.</p>
+</div>
+
+<p>Both FinWise Bank and First Electronic Bank are Utah industrial-bank charter partners that work with fintech and marketplace lenders nationally. That business model — loans originated by a Utah-chartered bank and then sold or serviced by an outside fintech partner — is one context in which prepayment-penalty rules can matter more directly than for a payday lender like Check City. This reporting has not established whether SB0230's provisions specifically affect that model; it notes the connection because the bank whose CEO testified on the bill, and the bank whose general counsel helped present it, are both closer in kind to the type of prepayment-heavy consumer lending the bill addresses than the PAC-linked payday lender is.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Doesn't shift authority between branches or offices.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>Normal committee process, but no consumer-side witness testified and the bank presenters' donor status to the sponsor went unmentioned on the record.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>Donor relationships (FinWise, Security Finance Corp) are documented and real, but the bill's substance is a genuine consumer-protection change, not an obvious donor giveaway.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable to this bill's subject.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>Removes a prepayment-penalty exception — pro-consumer on its face, passed unanimously with no organized opposition.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Consumers directly, since the prepayment-penalty removal helps borrowers; consumer lenders like FinWise and First Electronic Bank benefit indirectly from the certainty a clear default rule provides.</p>
+<p><strong>How this could serve the collective better:</strong> Include a consumer-advocacy witness in the committee record alongside the bank presenters, and publicly disclose which lenders requested the bill.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="judicial">
+<h2>4. Judicial Bills</h2>
+<p>Brammer is the sponsor or floor sponsor of four bills in the 2026 session's broader pattern of changes to how Utah's judiciary is evaluated, informed, structured, and — in SJR005's case — how cases move through it. All four are now graded below.</p>
+
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SB0233, Judicial Performance Evaluation Amendments
+    <span class="bill-summary-sub">Senate sponsor · Signed into law, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C-</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Mostly a reorganization of the statute governing the Judicial Performance Evaluation Commission, but with real substance. It adds new timeliness certification standards specifically for Supreme Court and Court of Appeals judges — a justice must distribute no more than 25% of opinions more than 150 days after submission, no more than 10% past 210 days, and 100% within a year (Court of Appeals judges: 120/180/270-day equivalents). It confirms the commission must study, by October 1, 2026, whether a judge's rate of being overturned on appeal for abuse of discretion should factor into performance evaluations, reporting to the Judiciary Interim Committee by November 1, 2026 — a provision that connects directly to SJR005 and HB392/366 above, since a judge who rules against the state in a case reassigned to a specially convened panel could see that reversal counted toward a public performance metric.</p>
+<p>The transparency picture is genuinely mixed. Retention reports become public and posted online, and a judge who fails a certification standard gets a guaranteed chance to appear and respond. But individual commissioners' votes on a specific judge stay protected, confidential records — only the commission's final aggregate vote is ever disclosed — and the bill newly authorizes the commission to meet in closed session to discuss a judge's performance before the vote itself happens in public.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">D</td><td>Creates a reversal-rate performance metric for judges in the same session the state gained new tools (SJR005, HB392/366) to move cases to hand-picked panels — a judge's willingness to rule against the state could show up as a personal performance mark.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>Retention reports and final votes are public; individual commissioner votes and pre-vote deliberation are newly shielded from disclosure.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not a financial bill.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>Judges get real due-process protections in the evaluation process itself, but the public loses visibility into how individual commissioners voted on a given judge.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Indirectly, the state's own litigating position — a reversal-rate performance metric could discourage judges from ruling against the state in cases reassigned under SJR005's panel mechanism.</p>
+<p><strong>How this could serve the collective better:</strong> Firewall the reversal-rate study from any connection to case-reassignment mechanisms, and keep individual commissioner votes public rather than newly shielding them.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="F">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SJR005, Rules of Civil Procedure (Business and Chancery Court / District Court Panel)
+    <span class="bill-summary-sub">Chief sponsor · Passed both chambers, party-line vote, 2/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-f" title="Overall grade">F</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>SJR005 amends the Utah Rules of Civil Procedure. It does two things. First, it lets the Attorney General, the Governor, or the Legislature — and no other party — file notice to pull a pending case away from its assigned judge into a specially convened "district court panel," referencing the same code section as the previously-documented HB392/366 panel mechanism. Once notice is filed, the original judge must transfer the case and can take no further action; parties lose the normal right to disqualify the whole panel or automatically change judges. Second, it creates a mandatory fast-track transfer to the Business and Chancery Court: if requested within 21 days, the district court must transfer the case and may not give any deference to the plaintiff's original choice of forum.</p>
+
+<p>The bill's chief sponsor is Brammer, not merely a floor sponsor as with the other three bills in this cluster. It passed the Senate 21-7-1 (2/12/2026) and the House 54-14-7 (2/13/2026) — in both chambers, every "no" vote matches the Democratic caucus exactly and every "yes" vote is Republican. No Democrat voted for it and no Republican voted against it in either chamber.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">F</td><td>Hands case-transfer power exclusively to the offices (AG, Governor, Legislature) the majority party currently controls, strips the reassigned judge of discretion, and reduces parties' disqualification and change-of-judge rights once transferred.</td></tr>
+<tr><td>Transparency</td><td class="grade">D</td><td>Passed through the normal floor process with no procedural tricks, but the mechanism itself removes the public/party visibility that ordinary case assignment provides.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not a financial bill.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Ordinary litigants lose forum-choice protections; passed on a straight party-line vote with no bipartisan buy-in.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> The offices the majority party currently controls — the Attorney General, the Governor, and the Legislature — plus commercial litigants who want a business-court fast-track.</p>
+<p><strong>How this could serve the collective better:</strong> Let any party, not just those three state offices, petition for a panel transfer, subject to neutral judicial approval, and preserve normal disqualification and change-of-judge rights once a case is transferred.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="F">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0366, Judicial Modifications
+    <span class="bill-summary-sub">Senate sponsor · Signed, 2/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-f" title="Overall grade">F</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Paired with HB0392 (same scheme). House chief sponsor is Jordan Teuscher; Brammer is confirmed as Senate sponsor, not merely a floor carrier. This modifies and reenacts the same panel statute SJR005 later operationalized procedurally — the AG, Governor, or Legislature can move a pending constitutional challenge to a specially selected panel mid-litigation, with a $1,500 filing fee for that notice.</p>
+<p><strong>The bill's "Constitutional Court" backup provision turns out to be far more developed than a placeholder.</strong> It only activates if a court strikes down the panel scheme — but once triggered, it's a complete, fully-designed replacement court: three judges with exclusive jurisdiction over the identical category of cases, and it automatically pulls in even already-pending district court cases through a 45-day retroactive removal window. A party has no way to transfer a case back out once it lands there. Judges for this court are chosen by a brand-new nominating commission whose all seven members are appointed directly by the governor — no legislator is eligible to serve, and there's no requirement for balance the way ordinary judicial nominating commissions have. Sitting district or appeals judges can serve on it without giving up their existing seat, earning an extra 5% salary for the dual role. In effect, this is an insurance policy: if courts ever invalidate the panel-transfer scheme, a fully governor-selected alternative court instantly takes over the exact same litigation instead.</p>
+<p>Separately, this bill also weakens transparency in a way not previously documented: the originally introduced version would have required the Business and Chancery Court to publish all of its final decisions online. The substitute that passed made this discretionary — the court only publishes a ruling if it decides that ruling is "valuable precedent or in the interest of the public." The court controls what the public gets to see of its own work. The bill also creates an expedited appeal right for challenges to injunctions against state laws, and exempts government defendants — but not private ones — from posting a bond to use it.</p>
+<p>None of this is theoretical — the Legislature used the underlying panel mechanism within weeks of passage, filing notice in March 2026 to move the state's own redistricting case away from the district judge it had been assigned to.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">F</td><td>The originating statute for the panel-transfer power, with a fully-designed, entirely governor-appointed backup court ready to take over the identical litigation if the panel scheme is struck down.</td></tr>
+<tr><td>Transparency</td><td class="grade">F</td><td>Removes ordinary case-assignment visibility, and separately weakens a publication requirement for Business and Chancery Court rulings from mandatory to discretionary.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not a financial bill (aside from a minor $1,500 filing fee and a 5% dual-service salary bump for judges).</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Same access-to-justice concerns as SJR005 — used within weeks to redirect a high-profile case, with a governor-controlled fallback court waiting in reserve.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Whichever party controls the governorship going forward — the Constitutional Court's nominating commission is entirely governor-appointed, handing that office a fully-built alternative court if the main scheme is ever struck down.</p>
+<p><strong>How this could serve the collective better:</strong> Include legislative- and judicial-branch appointees on the Constitutional Court Nominating Commission instead of an all-governor-appointed body, and keep Business and Chancery Court publication mandatory rather than discretionary.</p>
+</div>
+</div>
+</details>
+
+<div class="callout-box">
+<p><strong>The stack's architects funded each other.</strong> Brammer's own donor list includes $5,000 from <strong>Chris H. Wilson</strong> — the Senate sponsor of SB0134, the bill expanding the Supreme Court and shifting Chief Justice selection to the governor — and $5,000 from <strong>Mike McKell</strong>, the Senate sponsor of both HB0392 and HB0366. This isn't outside industry or lobbyist money moving into the judicial-power stack; it's the legislators who built separate pieces of the same coordinated 2026 program funding one another's campaigns directly.</p>
+</div>
+
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0540, Judicial Transparency and Information Access Amendments
+    <span class="bill-summary-sub">Senate sponsor · Signed, 3/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C+</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>House sponsor is Logan Monson; Brammer is Senate sponsor. <strong>This entry was corrected after reading the full substitute text — two things previously believed about this bill turned out to be wrong.</strong> What's confirmed real: the Judicial Council must build a single public website for searching court records, free for up to 50 searches and downloads a month, and judges and court commissioners must file the same public financial and conflict-of-interest disclosures as elected candidates.</p>
+<p>What's not accurate: the bill does <em>not</em> mandate free live audio streaming or automatic posting of recordings within three days — that was in the originally introduced bill, but this substitute stripped it. What actually passed only requires that a recording be made, then provided if an individual specifically requests it (expedited for parties, fee-eligible for everyone else); whether to make audio freely available going forward was punted to a Judicial Council study due in November 2026. Separately, the bill does not bar retired justices from appearing before their old court — that provision doesn't exist here. What it actually does is narrower: a law firm currently suing, or planning to sue, a Utah government entity may not hire a departed judge for two years, which protects the state's own litigation position more than it enacts a general judicial-ethics rule. One more wrinkle: registering to use the new court-records website requires disclosing citizenship status, not just identity and address — a real access barrier worth naming.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Doesn't transfer authority between branches.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>The court-records database and judge financial disclosures are real wins, but the audio-access promise was stripped from the original bill, and the new website requires citizenship-status disclosure to use.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>Still a net public benefit — searchable records and judge disclosures are genuine gains — just more modest than first described.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Hard to name a private beneficiary; the softened audio requirement mainly spares the courts a compliance cost, and the citizenship-status registration requirement could disproportionately burden noncitizen researchers or journalists.</p>
+<p><strong>How this could serve the collective better:</strong> Restore the original bill's automatic free audio-posting requirement instead of deferring it to a 2026 study, and drop the citizenship-status question from website registration.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="network">
+<h2>5. Legislative Partnerships</h2>
+<p class="quote-src" style="margin:-4px 0 16px;">Not an independently graded bill — background context on Brammer's most frequent co-sponsor relationship.</p>
+<h3>David Shallenberger</h3>
+<p>David Shallenberger was Brammer's most frequent reciprocal co-sponsor in 2026: he floor-sponsored Brammer's SJR8 (a UVU law school resolution), while Brammer floor-sponsored four of Shallenberger's bills. David is the son of Steven R. Shallenberger, founder of Synergy Companies, an energy-efficiency and remediation firm that works with utilities and municipalities. Steven Shallenberger gave $1,500 to UCL PAC — which also funds Brammer — but no direct contribution from Steven, Synergy, or David to Brammer's own campaign has been found. David Shallenberger is separately a documented figure in this project's water-rights reporting, including bills tied to a large data-center water package.</p>
+
+<h3>Housing and property bills</h3>
+<p>Brammer floor-sponsored several nuisance-law and local-government-fee bills, along with a higher-education student housing study bill. A Provo-based residential property management company sits in the same donor network (UCL PAC-adjacent) already documented for other legislators; the connection is noted here for completeness but has not been developed into an independent finding specific to Brammer.</p>
+</section>
+
+<section id="sb0145">
+<h2>6. SB0145 — Lobbying Amendments</h2>
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SB0145, Lobbying Amendments
+    <span class="bill-summary-sub">Chief sponsor · Signed 3/17/2026, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C-</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>A genuinely mixed bill. On the positive side, it closes a real loophole: lobbyists themselves are now banned from soliciting or accepting "success fee" compensation contingent on a government action happening — previously only the employer side of that arrangement was an offense.</p>
+<p>On the transparency side, it raises the small-gift disclosure thresholds by two and a half times — the daily aggregate expenditure amount that triggers public disclosure and the cap on non-food gifts both rise from $10 to $25, and a new $50 cap (up from $30) is carved out for publications and commemorative items. More lobbyist spending on public officials becomes legally invisible to the public as a result.</p>
+<p>It also creates a brand-new, complete exemption: tickets, travel, and admission to a sporting or artistic event hosted by a state or private nonprofit university no longer count as a reportable "expenditure" at all — not just a raised threshold, a full carve-out — so long as the purpose is to "build a relationship" between the institution and the official, a test that's easy to satisfy. This has not yet been checked against Brammer's own donor list for university-athletics or booster-organization money.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not a structural power bill.</td></tr>
+<tr><td>Transparency</td><td class="grade">D</td><td>Raises disclosure thresholds 2.5x and creates a full carve-out for university-hosted event tickets, reducing what the public can see of lobbying-adjacent gifts.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>No direct donor-interest connection confirmed yet; the substance itself loosens gift-value limits.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>Genuinely mixed — the contingent-fee ban is a real public good, offset by the reporting rollbacks.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Universities, via the new event-ticket exemption, and lobbyists or the principals who employ them, via the raised disclosure thresholds.</p>
+<p><strong>How this could serve the collective better:</strong> Keep the disclosure thresholds at their prior level — or index only to inflation — while still adding the contingent-fee ban, and require disclosure of university event tickets above a modest value instead of exempting them entirely.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="sb0235">
+<h2>7. SB0235 — Governor Compensation</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SB0235, Governor Compensation Amendments
+    <span class="bill-summary-sub">Chief sponsor (from substitute stage) · Signed 3/18/2026, effective 7/1/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>This bill did not start as Brammer's, and it did not start about the governor. It was introduced by Sen. Michael McKell as "Attorney General Compensation Amendments," pegging the Attorney General's salary directly to the chief justice of the Supreme Court's total compensation. A substitute changed the chief sponsor to Brammer, retitled the bill "Governor Compensation Amendments," and added the same chief-justice-pegged formula for the governor. By the enrolled version, the original Attorney General provision was dropped entirely — the AG remained at 95% of the governor's salary as before — leaving only the new governor's-salary formula in the final law.</p>
+
+<p>Using 2025 compensation figures (the most recent full year, since then-Chief Justice Matthew Durrant held the role for all of 2025): Gov. Spencer Cox's total compensation was $258,818.58. Durrant's was $381,410.88. Pegging the governor's salary to the chief justice's would mean a raise of roughly $122,592 — about 47% more than the governor's current total pay. This passed the same session as SB0134, which gave the governor appointment power over the chief justice position itself; the two bills are not the same mechanism, but they land in the same session and the same pay category.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">D</td><td>Passed the same session the governor gained appointment power over the chief justice role his own salary is now pegged to; not asserted as coordinated, but a real coincidence of timing and category.</td></tr>
+<tr><td>Transparency</td><td class="grade">D</td><td>The bill's entire subject and beneficiary changed via substitute — from a raise for the Attorney General to a raise for the Governor — with the sponsor also changing, and no on-record explanation found for either swap.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">D</td><td>A concrete, calculable ~47% raise for the governor's office, tied to a formula rather than a stated dollar figure, which somewhat obscures the size of the change at the time of the vote.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>Modest direct cost to the state budget; the process opacity is the bigger issue than the dollar amount itself.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Gov. Spencer Cox, the direct and immediate beneficiary of the new pay formula.</p>
+<p><strong>How this could serve the collective better:</strong> Let the original Attorney General pay bill proceed on its own merits with public debate, and set any governor pay change as an explicit, debated dollar figure rather than a formula automatically tied to another branch's compensation.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="sb0234">
+<h2>8. SB0234 — Environmental Rulemaking</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SB0234, Rulemaking Amendments
+    <span class="bill-summary-sub">Chief sponsor · Signed into law, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>SB0234 restricts Utah agencies' ability to regulate "environmental health and waste management" — a defined term covering drinking water, water pollution, hazardous substances, contaminated site remediation, air quality, and solid and hazardous waste. Wherever a federal standard exists, the bill prohibits Utah from adopting a numeric standard stricter than it. Where no federal standard exists, an agency may only set one if it can show — through "best available science and the weight of scientific evidence" — a direct causal link between exposure at that level and demonstrable bodily harm, a notably high bar compared to the risk-based standards environmental rulemaking typically relies on. One provision from the original bill was dropped in the final substitute: a proposed grant of authority letting a legislative committee delay any environmental rule's effective date did not survive to the enrolled version.</p>
+
+<p>Two of Brammer's campaign donors operate in industries this bill directly touches: <strong>EnergySolutions</strong> (Utah's hazardous and radioactive waste disposal operator) gave $500 in 2023 and $1,000 on 9/4/2026 — after this bill had already taken effect — and <strong>Energy Fuels</strong> (operator of the White Mesa uranium mill) gave in a same-day, multi-PAC batch on 11/20/2025, about three months before the bill passed. This bill also connects to an existing pattern of environmental-rule changes documented elsewhere in this project, including the 2024 repeal of the Air Quality Policy Advisory Board and a 2026 sunset-extension bill that pointedly excluded several environmental statutes from its extensions.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">D</td><td>Removes Utah regulatory agencies' authority to exceed federal minimum standards going forward, binding future rulemaking regardless of state-specific conditions.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>Normal legislative process with no procedural tricks; the one provision removed between versions (legislative delay power over agency rules) was cut, which if anything reduces an added layer of legislative control.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>Documented donor overlap with two waste/mining-adjacent industry donors; the bill doesn't appropriate or direct money to them, so this is a regulatory-benefit connection, not a financial one.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">D</td><td>Caps the state's own ability to regulate hazardous and radioactive waste, air quality, and water beyond the federal floor, with a high evidentiary bar for any exception.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Communities near regulated sites (e.g., waste disposal or uranium milling operations) lose access to state-level protection stricter than federal baseline.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> EnergySolutions and Energy Fuels — both confirmed donors in industries this bill directly regulates (hazardous/radioactive waste and uranium mining).</p>
+<p><strong>How this could serve the collective better:</strong> Allow Utah agencies to exceed federal minimums when justified by state-specific conditions, and keep the normal risk-based rulemaking standard instead of requiring proof of direct bodily-harm causation for any state action beyond the federal floor.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="hb0575">
+<h2>9. HB0575 — Fuel Tax and Supply Amendments</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0575, Fuel Tax and Supply Amendments
+    <span class="bill-summary-sub">Senate floor sponsor · Signed, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Chief sponsor is Rep. Calvin Roberts; Brammer carried it as Senate floor sponsor. The bill bundles several distinct oil-and-gas-industry provisions with an $11.9 million one-time General Fund appropriation to Transportation for road construction.</p>
+<p>It creates a new fast-track permitting scheme for oil and gas "midstream facilities" — pipelines, storage tanks, and processing plants — imposing a mandatory 120-day decision deadline on state regulators across the air-quality, water-quality, and hazardous-substance permitting divisions, extendable unilaterally by only 30 days. It also temporarily cuts the gasoline tax to a fixed rate for the back half of 2026, while raising the tax on alternative fuels (compressed natural gas, liquefied natural gas, hydrogen) from roughly 16.5 cents to a new 21.2-cent baseline — a real asymmetry that favors conventional fuel over clean alternatives.</p>
+<p>The most notable provision is a new quarterly refinery production-reporting requirement. On its face this looks like new oversight, but the reported data is legally classified as a protected record, confidential commercial information, <em>and</em> a trade secret all at once — it can only ever be released in aggregate, cannot be used for regulatory enforcement, price regulation, or any civil or criminal investigation, is not subject to subpoena or discovery in any proceeding, and a court "may not order disclosure." A state employee who discloses it commits a crime. The bill also expands an existing infrastructure tax credit to explicitly cover pipeline construction and refined-hydrocarbon storage in salt caverns.</p>
+<p>Not yet checked against Brammer's donor list for refining or pipeline industry money.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">C</td><td>Binds regulatory agencies to a mandatory fast-track timeline for pipeline permitting, limiting their discretion.</td></tr>
+<tr><td>Transparency</td><td class="grade">F</td><td>A "reporting requirement" whose data is walled off by design from ever being used in enforcement, litigation, or public disclosure — transparency in name only.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">D</td><td>New tax-credit subsidy category for pipeline and fossil-fuel storage infrastructure; the refinery-secrecy provision also shields production and pricing data from scrutiny.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">D</td><td>Fast-tracks pipeline and midstream facility permitting across environmental review divisions; raises the relative cost of alternative fuels versus gasoline.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>A short-term gas tax cut benefits consumers directly, offset by the alternative-fuel tax increase and reduced regulatory friction for industrial buildout.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Oil and gas refiners and pipeline operators, whose production data the secrecy provision specifically shields from enforcement, subpoena, and disclosure.</p>
+<p><strong>How this could serve the collective better:</strong> Allow redacted disclosure of genuinely proprietary business details while still permitting enforcement use of the underlying data, and keep the alternative-fuel tax rate proportionate instead of raising it while cutting the gasoline rate.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="hb0591">
+<h2>10. HB0591 — Nuisance Amendments</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0591, Nuisance Amendments
+    <span class="bill-summary-sub">Senate floor & substitute sponsor · Signed 3/25/2026, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D-</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>This is a sweeping rewrite of Utah nuisance law — 58 code sections affected across three Senate substitutes, all carried by Brammer, who is listed as both floor sponsor and substitute sponsor (the House chief sponsor is Rep. Colin Jack). Its central move: it <strong>abrogates the common-law right to sue over a nuisance</strong> entirely, replacing it with a narrow statutory scheme. Going forward, only the Attorney General may still bring a common-law nuisance claim — and only where there is "substantial ongoing harm to a significant number of the citizens of Utah," with a report due to the Judiciary Interim Committee every four years starting in 2029 on how that authority has been used.</p>
+
+<p>Under the new statutory scheme, a private party suing over a public nuisance must prove "special injury" by clear-and-convincing evidence — and the bill explicitly excludes two categories from counting as special injury: harm to a site's "spiritual, cultural, or emotional significance," and a party's own expenditures made in responding to the nuisance. No class actions are allowed. Government entities that sue can recover only injunctive relief and abatement costs, never damages of any kind, and cannot base their right to sue solely on having spent money responding to the nuisance.</p>
+
+<p>Most notably, the bill's definition of "public nuisance" explicitly excludes <strong>"the design, manufacturing, distributing, selling, labeling, or marketing of a legal product"</strong> as a category — and separately names <strong>firearms, firearm accessories, and ammunition</strong> as excluded by name. This mirrors a recognized national tort-reform pattern used in other states specifically to block public-nuisance lawsuits against opioid manufacturers, PFAS producers, and gun makers. The bill also creates new statutory defenses shielding manufacturing facilities in operation more than three years, critical-infrastructure and mining operations, shooting ranges, and agricultural operations from neighbor nuisance suits.</p>
+
+<p>This has not yet been checked against Brammer's own donor list for manufacturing, mining, or firearms-industry money.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">D</td><td>Centralizes common-law nuisance authority almost entirely in the Attorney General's office, removing it from ordinary citizens and most local governments.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>Normal public process across three substitutes; includes a genuine reporting requirement to the Legislature, though it doesn't begin until 2029.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">F</td><td>Explicit, named liability shield for legal-product and firearms manufacturers from public nuisance suits; blocks governments from recovering damages or suing based on cleanup-cost expenditures alone.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">D</td><td>New codified defenses protect manufacturing and mining/critical-infrastructure operations from neighbor nuisance claims.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Ordinary citizens and communities lose the historic common-law right to sue over conditions harming their health or property; the replacement standard is narrow and evidentiarily demanding.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Legal-product manufacturers generally, and firearms and ammunition makers by name; also mining, manufacturing, and shooting-range operators through the new codified defenses.</p>
+<p><strong>How this could serve the collective better:</strong> Keep case-by-case judicial discretion instead of a blanket product-category exclusion, and preserve some avenue for legitimate public-health claims rather than cutting off response-cost and cultural-harm claims entirely.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="sjr001">
+<h2>11. For Balance and Flagged Items — SJR001, HB0396, HB0307, HB0052, HB0053</h2>
+<details class="bill-card" data-grade="B">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SJR001, Rules of Evidence Concerning Crimes or Other Acts
+    <span class="bill-summary-sub">Chief sponsor · Judiciary Interim Committee recommended 10-2-4 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-b" title="Overall grade">B+</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Included for balance, not scrutiny. SJR001 expands when a defendant's other bad acts can be admitted as propensity evidence in sex-crime cases — extending an existing child-molestation exception to also cover sexual exploitation of a minor charges, and adding a new provision allowing similar propensity evidence in sexual assault cases generally, with a disclosure requirement to the defense. This is a standard victim-protection reform of the kind many states have adopted, unconnected to any donor or power-transfer thread documented in this file.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">A</td><td>Ordinary committee process, recommended 10-2, no procedural irregularities found.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>Victim-protective and consistent with reforms in many other states; broadening propensity evidence carries some inherent due-process trade-off for defendants, worth naming even in an otherwise favorable case.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Prosecutors and victims of child molestation and sexual assault.</p>
+<p><strong>How this could serve the collective better:</strong> Already well-balanced as written; could pair the expanded propensity evidence with an explicit judicial balancing-test reminder to further protect defendants' due-process interests.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="B">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0396, Public Project Subcontractor Amendments
+    <span class="bill-summary-sub">Senate floor sponsor · Effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-b" title="Overall grade">B</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Also included for balance. Chief sponsor is Rep. Jefferson Burton; Brammer carried it as Senate floor sponsor. It targets a well-known construction-industry fraud pattern: subcontractors falsely claiming "zero estimated exposure" workers' compensation policies to avoid paying premiums — a practice that can leave real workers without coverage if they're injured on the job. The bill requires a signed, fraud-warning attestation for any such policy, requires subcontractors on public projects to disclose their employee lists and zero-exposure status to the general contractor and property owner, requires those records be kept for three years and shared with the state on request, and makes noncompliance grounds for license discipline. A genuine anti-fraud, worker-protection measure with no donor or power-transfer connection found.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">B</td><td>Adds real disclosure requirements for subcontractors on public projects.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">B</td><td>Targets a specific, documented workers'-comp fraud vector that shifts risk onto injured workers and the public.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>Protects construction workers' access to real coverage and protects the integrity of public construction spending.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Construction workers, who gain real coverage protections, and honest subcontractors competing against ones who falsely claim zero exposure.</p>
+<p><strong>How this could serve the collective better:</strong> Extend the same protections to private, non-public construction projects, since workers'-compensation fraud isn't limited to government contracts.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0307, Attorney Fees Amendments
+    <span class="bill-summary-sub">Senate floor sponsor · Effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Flagged as needing more legal analysis before it's characterized further, not a settled finding. Chief sponsor is Rep. Anthony Loubet; Brammer carried it as Senate floor sponsor. It replaces Utah's existing three-part "bad faith" test for awarding attorney fees — which required proving a losing party lacked an honest belief in their position, intended to take unconscionable advantage, or intended to hinder or defraud — with a simpler, uniformly-worded standard applied across six different statutes at once: fees may be awarded if a claim, defense, or request for a new trial was brought "to harass, cause unreasonable delay, needlessly increase the cost of litigation, or abuse the judicial process." This touches dog-attack arbitration, uninsured/underinsured motorist arbitration, motor vehicle accident arbitration, mechanics-lien disputes, general civil actions, and small-claims appeals.</p>
+<p>It isn't yet clear which way this cuts — it could make bad-faith fee awards easier to win (a more objective, conduct-based test) or harder (it drops the "honest belief" inquiry into a losing party's own state of mind). What is worth flagging: Brammer's donor list already includes a cluster of personal-injury law firms whose core practice is exactly the kind of motor-vehicle arbitration this bill governs — a real donor-industry overlap, even without a clear read yet on who the standard change actually favors.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">N/A</td><td>Normal legislative process.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>Donor overlap with personal-injury firms in the exact practice area affected; direction of benefit not yet determined.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>Affects how litigation costs are allocated between parties statewide; effect on ordinary litigants not yet clear.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Not yet clear without deeper legal analysis; personal-injury law firms in Brammer's own donor base practice in exactly the arbitration area this bill governs.</p>
+<p><strong>How this could serve the collective better:</strong> Retain the old test's 'honest belief' inquiry alongside the new conduct-based standard rather than replacing it outright, and commission a comparative case-law study before consolidating six different statutes' standards into one.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="B">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0052, Tribal Endorsement of Utah Driver License Amendments
+    <span class="bill-summary-sub">Senate sponsor · Effective 1/1/2027 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-b" title="Overall grade">B</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Also included for balance. Chief sponsor is Rep. A. Cory Maloy; Brammer carried it as Senate sponsor. It lets an applicant request a "Federally Recognized Tribal Member" notation on their Utah driver license or ID — the substitute changed this wording from the originally proposed "Native American" to more precise, official terminology — based on documentation like a tribal ID, a certificate of Indian blood, or a Bureau of Indian Affairs birth affidavit. The notation cannot identify which specific tribe the person belongs to. The state appropriated $192,900 to update the Driver License Division's systems to accommodate it. A straightforward, uncontroversial accommodation bill with no donor or power-transfer connection.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>A genuine, uncontroversial accommodation for tribal members with no downside identified.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Tribal members who choose to request the notation.</p>
+<p><strong>How this could serve the collective better:</strong> Hard to improve meaningfully as written; could let an applicant optionally specify their tribe for those who want fuller representation, while keeping the anonymized option as the default.</p>
+</div>
+</div>
+</details>
+
+<details class="bill-card" data-grade="B">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0053, Community Rehabilitation Program Amendments
+    <span class="bill-summary-sub">Senate floor sponsor · Signed 3/17/2026, effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-b" title="Overall grade">B</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Also included for balance. Chief sponsor is Rep. Grant Amjad Miller; Brammer carried it as Senate floor sponsor. It extends the sunset date of the Purchasing from Persons with Disabilities Advisory Board — a program requiring state procurement units to preferentially buy goods and services, up to $5 million a year, from "community rehabilitation programs" that employ people with severe disabilities — from 2026 out to 2036. It also adds a new annual reporting requirement to the Government Operations Interim Committee starting in 2027, covering contract counts, revenue, the number of disabled employees, and success metrics. A genuinely positive program-continuation and accountability bill, with no donor or power-transfer connection found.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">B</td><td>Adds a real new annual reporting requirement with concrete metrics.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">B</td><td>Extends a genuine disability-employment program with no downside identified.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Community rehabilitation programs and the people with disabilities they employ.</p>
+<p><strong>How this could serve the collective better:</strong> Index the $5 million annual cap to inflation so the preference doesn't erode in real value over the 10-year extension, and have the new annual report break out rural versus urban program reach.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="sb0068">
+<h2>12. SB0068 — Disability Litigation Amendments</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">SB0068, Disability Litigation Amendments
+    <span class="bill-summary-sub">Chief sponsor · Signed 3/23/2026, sunsets 7/1/2031 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Brammer is chief sponsor; House floor sponsor is Nelson Abbott. The bill creates a new civil right of action letting a business sued over an inaccessible website — under the Americans with Disabilities Act — countersue whoever filed that suit, if a judge finds the lawsuit was "abusive": defined as primarily seeking a payout rather than fixing the accessibility problem. A judge weighing that question considers factors including how many similar lawsuits the same filer has brought, whether the filer is a Utah resident or licensed to practice here, and whether the case was filed somewhere that makes it hard for the business to defend itself. There's a rebuttable presumption the suit was abusive if the business made a good-faith attempt to fix the problem within 30 days of notice, or actually fixed it within 90 days. If a court finds the suit abusive, it can award the business its attorney fees, punitive damages, and sanctions against the filer — capped at three times the fee award. The state Attorney General can also bring this action on a business's behalf.</p>
+<p>This deserves a fair reading on both sides. "Drive-by" ADA website lawsuits filed mainly to extract quick settlements are a real, well-documented problem nationally, and this bill's target isn't invented. But private lawsuits are also the main practical way ADA website accessibility gets enforced at all — there's no government agency that proactively inspects business websites for compliance. A law that lets businesses countersue for punitive damages, where filing multiple similar suits counts as evidence of bad intent, risks discouraging legitimate accessibility advocacy — including from the specialist advocates and attorneys who file repeatedly precisely because violations are so widespread. Not yet checked against Brammer's donor list for business-association money.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>Creates new financial exposure specifically for filing ADA accessibility claims; not yet checked against donor money.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Targets a real problem (extortionate drive-by suits) but does so in a way that risks chilling the primary enforcement mechanism for a disability-rights law, since repeat filing is itself treated as evidence of bad intent.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Businesses defending against ADA website-accessibility lawsuits generally — any business with a website.</p>
+<p><strong>How this could serve the collective better:</strong> Judge whether a filing was 'abusive' by outcome — did the business actually fix the problem after notice — rather than counting repeat filing itself as evidence of bad intent, which would preserve the deterrent against extortionate suits without penalizing serial, legitimate advocates.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="hb0280">
+<h2>13. HB0280 — Third Party Litigation Funding</h2>
+<details class="bill-card" data-grade="C">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0280, Third Party Litigation Funding Amendments
+    <span class="bill-summary-sub">Senate floor sponsor · Effective 5/6/2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-c" title="Overall grade">C</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Chief sponsor is Rep. James Dunnigan; Brammer is confirmed as Senate floor sponsor on the enrolled bill. It's a comprehensive rewrite of Utah's 2020 litigation-funding statute, and genuinely two-sided rather than a one-way industry favor.</p>
+<p>On the consumer-protective side, it extends the rescission period on consumer legal-funding agreements from five to ten business days, bans referral-fee relationships between attorneys and funders, bars funders from directing or controlling a plaintiff's litigation decisions, protects consumer-funder attorney communications from discovery, makes funders jointly and severally liable for adverse cost awards against the consumer, and bans funding arrangements with foreign entities of concern.</p>
+<p>On the insurer-favorable side — and this is the piece that matches a recognized national insurance-industry priority — it requires automatic disclosure of any commercial litigation-funding agreement to the opposing party without a discovery request, and makes those agreements admissible as evidence at trial. Brammer's donor list includes CIGNA, American Property and Casualty, and Regence, all of which have a direct interest in exactly this kind of disclosure-and-admissibility rule.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Transparency</td><td class="grade">C</td><td>Adds disclosure requirements, but only toward the opposing party in litigation, not the public.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">C</td><td>Real donor overlap (CIGNA, American Property and Casualty, Regence) with the bill's insurer-favorable provisions, balanced by genuine consumer protections elsewhere in the same bill.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">C</td><td>Mixed effect — real new consumer protections against predatory funding terms, alongside a rule that could complicate funded lawsuits generally.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> Insurers — CIGNA, American Property and Casualty, and Regence are all confirmed Brammer donors — via the disclosure and admissibility rule; consumers benefit from the rescission-period extension and fee-referral bans.</p>
+<p><strong>How this could serve the collective better:</strong> Require funding-agreement disclosure to the court for conflict-checking purposes only, rather than making it automatically admissible as trial evidence, which risks prejudicing a jury against a funded plaintiff regardless of the underlying claim's merits.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="hb0017">
+<h2>14. HB0017 — Public Infrastructure District Meeting Amendments</h2>
+<details class="bill-card" data-grade="D">
+<summary class="bill-summary">
+  <span class="bill-summary-text">HB0017, Public Infrastructure District Meeting Amendments
+    <span class="bill-summary-sub">Senate sponsor · Passed unanimously at every stage, 2026 · <span class="toggle-hint closed-only">tap to expand</span><span class="toggle-hint open-only">tap to collapse</span></span>
+  </span>
+  <span class="bill-summary-right">
+    <span class="grade-badge grade-d" title="Overall grade">D</span>
+  </span>
+</summary>
+<div class="bill-body">
+<p>Chief sponsor is Rep. Doug Welton; Brammer is Senate sponsor. This one is a genuine loophole swap, not the removal it first looked like. A narrow existing exception had let a Public Infrastructure District board hold one meeting a year outside its own boundaries — planning or education purposes only, with no votes or final action allowed. This bill replaces that narrow exception with a much broader one: PID meetings may now be held anywhere "within the boundaries of the entity that created the PID" — with no limit on how often, no restriction on purpose, and no ban on taking final action or votes there.</p>
+<p>The problem is that a PID's creating entity — usually a city or county — is typically far larger than the PID itself. For any PID created by an entire county, this means the board can now hold meetings, including ones with binding votes, anywhere in that county rather than where the district's own residents actually live. The bill passed unanimously at every stage of the process, and nobody raised this on the record.</p>
+
+<table class="rubric">
+<tr><th>Criterion</th><th>Grade</th><th>Basis</th></tr>
+<tr><td>Power</td><td class="grade">D</td><td>Gives PID boards more freedom to meet away from the community their decisions actually affect.</td></tr>
+<tr><td>Transparency</td><td class="grade">F</td><td>Directly hollows out the rule that PID meetings happen within the district's own boundaries — the core purpose of the provision it replaces.</td></tr>
+<tr><td>Financial Accountability</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Environmental Impact</td><td class="grade">N/A</td><td>Not applicable.</td></tr>
+<tr><td>Community Impact</td><td class="grade">D</td><td>Residents living in or near the PID lose practical ability to attend meetings, including ones where binding votes happen.</td></tr>
+</table>
+<div class="collective-note">
+<p><strong>Who this helps:</strong> PID boards and the developers who rely on them, who gain freedom to meet away from the residents their decisions actually affect.</p>
+<p><strong>How this could serve the collective better:</strong> Keep the original narrow retreat exception, or if broadening it, add a proximity cap — meetings must stay within a set distance of the PID itself — instead of unlimited anywhere-in-the-creating-entity's-boundaries language.</p>
+</div>
+</div>
+</details>
+</section>
+
+<section id="donors">
+<h2>15. The Broader Donor Base</h2>
+<p>Most of Brammer's fundraising follows patterns already documented for other Utah incumbents in this project: the Utah Republican Senate Campaign Committee gave $65,000 across three gifts; a cluster of roughly 17 PACs and corporations gave on the same day, November 20, 2025 — a pattern that matches a nearly identical same-day PAC list already found funding another House incumbent, suggesting coordinated PAC-giving dates rather than candidate-specific targeting. Personal-injury law firms that appear across multiple legislators' filings also gave to Brammer, at higher amounts than seen in some other files reviewed.</p>
+<p>Brammer's campaign paid Election Hive $4,000 in November 2024 — the same Matthew Lusty-run political consulting and money-processing operation documented extensively elsewhere in this project as a hub for many other Utah candidates and bill sponsors (including Gov. Cox, AG Derek Brown, and several legislators tied to other bills in this file). This looks like a shared-vendor relationship consistent with that broader pattern rather than a unique Brammer finding — what the payment specifically purchased hasn't been independently confirmed.</p>
+<p>A separate itemized batch covering June–September 2026 ($21,750 subtotal) — confirmed against the underlying DEX exports as a later period not included in the $217,005.41 total above — includes gifts from AT&T, Comcast, Regence, the Utah Farm Bureau Federation's AGPAC, Energy Solutions, rPlus Energies, Lumen, and Strata Networks, along with $500 from U.S. Senator John Curtis and $1,000 from the Committee to Elect Lincoln Fillmore. This period will presumably appear in Brammer's next formal filing.</p>
+</section>
+
+<section id="rubric">
+<h2>16. Scorecard — All Graded Bills</h2>
+<p>Each bill above is graded independently against the standing five-criterion rubric (Power, Transparency, Financial Accountability, Environmental Impact, Community Impact); the badge in each bill's header is its overall grade. Summary:</p>
+
+<div class="dist-bar-wrap">
+  <div class="dist-bar">
+    <div class="dist-seg f" style="flex:2" data-filter-jump="F" title="2 bills graded F">2</div>
+    <div class="dist-seg d" style="flex:6" data-filter-jump="D" title="6 bills graded D-range">6</div>
+    <div class="dist-seg c" style="flex:6" data-filter-jump="C" title="6 bills graded C-range">6</div>
+    <div class="dist-seg b" style="flex:4" data-filter-jump="B" title="4 bills graded B-range">4</div>
+  </div>
+  <div class="dist-legend">
+    <span><span class="swatch" style="background:#8c2f2f;"></span>F — 2 bills</span>
+    <span><span class="swatch" style="background:#b5652e;"></span>D-range — 6 bills</span>
+    <span><span class="swatch" style="background:#b5952e;"></span>C-range — 6 bills</span>
+    <span><span class="swatch" style="background:#4f7a4f;"></span>B-range — 4 bills</span>
+  </div>
+  <p style="font-size:0.85rem;color:var(--color-ink-soft);margin-top:10px;">Click a segment above, or a button at the top of the page, to filter the bill sections by grade band.</p>
+</div>
+
+<table class="rubric" id="scorecardTable">
+<tr><th class="sortable" data-col="0" data-type="text">Bill <span class="arrow">▾</span></th><th class="sortable" data-col="1" data-type="grade">Overall <span class="arrow">▾</span></th><th>Headline reason</th></tr>
+<tr><td>SB0230, Consumer Credit Amendments</td><td class="grade">C+</td><td>Donor overlap documented, but the bill itself is genuinely pro-consumer.</td></tr>
+<tr><td>SB0233, Judicial Performance Evaluation Amendments</td><td class="grade">C-</td><td>New reversal-rate metric for judges lands in the same session the state gained tools to redirect cases; commissioner votes newly shielded from disclosure.</td></tr>
+<tr><td>SJR005, Rules of Civil Procedure (Panel Transfer / Business Court)</td><td class="grade">F</td><td>Concentrates case-transfer power in the majority party's own offices; passed on a straight party-line vote.</td></tr>
+<tr><td>HB0366, Judicial Modifications</td><td class="grade">F</td><td>Chief sponsor Senate role confirmed; the "Constitutional Court" backup is a fully governor-appointed shadow court, not a placeholder — plus a separate rollback making Business/Chancery Court publication discretionary.</td></tr>
+<tr><td>HB0540, Judicial Transparency and Information Access Amendments</td><td class="grade">C+</td><td>Real court-records database and judge disclosures, but the free-audio promise was stripped in the substitute and a citizenship-status barrier was added.</td></tr>
+<tr><td>SB0145, Lobbying Amendments</td><td class="grade">C-</td><td>Closes a real contingent-fee loophole, but raises gift-disclosure thresholds and creates a new university-event carve-out.</td></tr>
+<tr><td>SB0235, Governor Compensation</td><td class="grade">D</td><td>Sponsor and subject both changed via substitute; results in a substantial, unexplained raise.</td></tr>
+<tr><td>SB0234, Rulemaking Amendments (environmental)</td><td class="grade">D</td><td>Caps state environmental rulemaking at the federal floor; two donors sit in directly affected industries.</td></tr>
+<tr><td>HB0591, Nuisance Amendments</td><td class="grade">D-</td><td>Abrogates the common-law right to sue over a nuisance; names firearms and "legal products" as excluded from public-nuisance liability.</td></tr>
+<tr><td>SB0068, Disability Litigation Amendments</td><td class="grade">D</td><td>Targets real drive-by ADA lawsuits but risks chilling legitimate accessibility enforcement, the primary practical mechanism for the law.</td></tr>
+<tr><td>HB0575, Fuel Tax and Supply Amendments</td><td class="grade">D</td><td>Fast-tracks pipeline permitting; a refinery "reporting" requirement whose data is shielded from ever being used in enforcement or litigation.</td></tr>
+<tr><td>SJR001, Rules of Evidence (sex crimes)</td><td class="grade">B+</td><td>Standard victim-protection reform, included for balance.</td></tr>
+<tr><td>HB0396, Public Project Subcontractor Amendments</td><td class="grade">B</td><td>Anti-fraud, worker-protection bill; also included for balance.</td></tr>
+<tr><td>HB0307, Attorney Fees Amendments</td><td class="grade">C</td><td>Consolidates "bad faith" fee-shifting standards across six statutes; donor overlap with personal-injury firms, direction of benefit not yet clear.</td></tr>
+<tr><td>HB0052, Tribal Endorsement of Utah Driver License Amendments</td><td class="grade">B</td><td>Uncontroversial tribal-ID accommodation bill, included for balance.</td></tr>
+<tr><td>HB0053, Community Rehabilitation Program Amendments</td><td class="grade">B</td><td>Extends a disability-employment procurement program 10 years with new reporting; included for balance.</td></tr>
+<tr><td>HB0280, Third Party Litigation Funding Amendments</td><td class="grade">C</td><td>Genuine consumer protections paired with an insurer-favorable disclosure/admissibility rule; donor overlap with CIGNA, American Property and Casualty, and Regence.</td></tr>
+<tr><td>HB0017, Public Infrastructure District Meeting Amendments</td><td class="grade">D</td><td>Replaces a narrow PID out-of-boundary meeting exception with a much broader one, hollowing out the requirement that PID meetings happen within the district's own boundaries.</td></tr>
+</table>
+
+<h3 style="margin-top:28px;">What the good bills touch, versus what the bad ones touch</h3>
+<p>Grading each bill on its own doesn't show the full picture. What does is looking at how many people each bill actually reaches.</p>
+<p>The four bills graded B or better each touch a narrow slice of the state: tribal members who choose to request a license notation (HB0052); a disability-employment procurement program capped at $5 million a year (HB0053); subcontractors specifically on public construction projects (HB0396); one evidentiary rule for one category of prosecutions (SJR001). Combined, these bills affect at most a few thousand people or one narrow industry corner.</p>
+<p>The bills graded D or F each touch nearly the entire state at once: every resident's common-law right to sue over a nuisance (HB0591); all environmental rulemaking, statewide (SB0234); every business in Utah that has a website, through ADA enforcement (SB0068); pipeline and refinery oversight, statewide (HB0575); the Governor's own compensation (SB0235); a meeting-transparency loophole replicable across every Public Infrastructure District in the state (HB0017); and the basic architecture of who controls the courts themselves (SJR005, HB0366).</p>
+<p>That split isn't a coincidence of how the grading worked out. Narrow bills are cheap to make purely good, because there's no competing interest large enough to trade off against the public. Broad bills are where donor money and institutional power actually show up in this file — because that's where the stakes are big enough to be worth buying.</p>
+</section>
+
+<section id="questions">
+<h2>18. Questions Worth Asking</h2>
+<ul class="tidy">
+<li>Should a PAC's contribution to a candidate be reported alongside that candidate's household ties to the PAC's own leadership?</li>
+<li>Does Utah's committee-testimony disclosure process require a bank executive testifying on a bill to note that the bank is also a donor to the bill's sponsor?</li>
+<li>Do SB0230's prepayment-penalty changes specifically affect the bank-fintech "rent-a-bank" lending model that FinWise and First Electronic Bank are known for — a question this reporting could not resolve from the bill text alone?</li>
+</ul>
+</section>
+
+<details class="sources" id="sources">
+<summary>Sources (click to expand)</summary>
+<ul>
+<li>Utah Lieutenant Governor's disclosures.utah.gov — Brady Brammer campaign finance reports, 2024 Vacancy/Year End, 2026 Convention, 2026 Primary</li>
+<li>disclosures.utah.gov — Kandee Myers 2026 Year End Report, itemized transaction export</li>
+<li>doersnetwork.org — organizational board roster</li>
+<li>Nicki Brammer, Aspen Peaks School District Seat 3 campaign finance report, filed 8/12/2025</li>
+<li>Utah Senate Business and Labor Committee minutes, Feb. 6, 2026</li>
+<li>Utah House Business, Labor, and Commerce Committee minutes, Feb. 27, 2026</li>
+<li>SB0230 enrolled bill text, Utah Legislature website</li>
+<li>Utah Legislature website — Brady Brammer sponsorship/floor-sponsorship record</li>
+<li>Brady Brammer, direct on-record responses to questions from this reporting (received Aug. 11 and Aug. 13, 2026)</li>
+<li>Utah Division of Corporations — Coalatree entity filings</li>
+<li>Steven R. Shallenberger, podcast transcript (Synergy Companies)</li>
+</ul>
+</details>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <h3>The Weber County Hive · Utah Senators</h3>
+    <p>An accountability journalism series covering individual Utah legislators — their board seats, the bills they sponsor, and where their votes and money lead. Built exclusively from primary documents.</p>
+    <div class="links">
+      <a href="index.html">Utah Senators Index ↗</a>
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var billCards = Array.prototype.slice.call(document.querySelectorAll('.bill-card'));
+  var filterBtns = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
+  var distSegs = Array.prototype.slice.call(document.querySelectorAll('.dist-seg'));
+
+  function applyFilter(grade){
+    billCards.forEach(function(card){
+      var g = card.getAttribute('data-grade');
+      var show = (grade === 'all') || (g === grade);
+      if(show){
+        card.removeAttribute('data-hidden');
+      } else {
+        card.setAttribute('data-hidden','true');
+        card.removeAttribute('open');
+      }
+    });
+    filterBtns.forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-filter') === grade);
+    });
+  }
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  distSegs.forEach(function(seg){
+    seg.addEventListener('click', function(){
+      var grade = seg.getAttribute('data-filter-jump');
+      applyFilter(grade);
+      var matchBtn = filterBtns.filter(function(b){ return b.getAttribute('data-filter') === grade; })[0];
+      if(matchBtn){ matchBtn.scrollIntoView({behavior:'smooth', block:'center'}); }
+    });
+  });
+
+  var expandToggle = document.getElementById('expandToggle');
+  var expanded = false;
+  expandToggle.addEventListener('click', function(){
+    expanded = !expanded;
+    billCards.forEach(function(card){
+      if(card.getAttribute('data-hidden') === 'true') return;
+      if(expanded){ card.setAttribute('open',''); } else { card.removeAttribute('open'); }
+    });
+    expandToggle.textContent = expanded ? 'Collapse all' : 'Expand all';
+  });
+
+  // Sortable scorecard table
+  var table = document.getElementById('scorecardTable');
+  if(table){
+    var gradeOrder = {'A':1,'A-':2,'B+':3,'B':4,'B-':5,'C+':6,'C':7,'C-':8,'D+':9,'D':10,'D-':11,'F':12};
+    var headers = Array.prototype.slice.call(table.querySelectorAll('th.sortable'));
+    var sortState = {};
+    headers.forEach(function(th){
+      th.addEventListener('click', function(){
+        var col = parseInt(th.getAttribute('data-col'), 10);
+        var type = th.getAttribute('data-type');
+        var asc = !sortState[col];
+        sortState = {};
+        sortState[col] = asc;
+        headers.forEach(function(h){
+          h.classList.remove('sorted');
+          h.querySelector('.arrow').textContent = '▾';
+        });
+        th.classList.add('sorted');
+        th.querySelector('.arrow').textContent = asc ? '▴' : '▾';
+
+        var rows = Array.prototype.slice.call(table.querySelectorAll('tr')).slice(1);
+        rows.sort(function(a, b){
+          var av = a.children[col].textContent.trim();
+          var bv = b.children[col].textContent.trim();
+          if(type === 'grade'){
+            av = gradeOrder[av] || 99;
+            bv = gradeOrder[bv] || 99;
+            return asc ? av - bv : bv - av;
+          }
+          return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+        });
+        rows.forEach(function(r){ table.appendChild(r); });
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
