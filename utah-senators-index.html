@@ -353,6 +353,17 @@
 <script src="senators-data.js"></script>
 <script>
 (function(){
+  // Guard: senators-data.js must load before this script runs. If it's missing
+  // from the repo (or the <script src> tag above is broken), fail loudly on
+  // the page instead of silently showing an empty roster.
+  if(typeof SENATORS === 'undefined'){
+    document.getElementById('roster').innerHTML =
+      '<div class="empty-state show" style="grid-column:1/-1;border-color:#a3392a;color:#a3392a;">' +
+      '<strong>senators-data.js did not load.</strong><br>Make sure senators-data.js is uploaded ' +
+      'in the same folder as this index.html file, then refresh the page.</div>';
+    return;
+  }
+
   var CURRENT_YEAR = new Date().getFullYear();
   var roster = document.getElementById('roster');
   var emptyState = document.getElementById('emptyState');
